@@ -14,6 +14,8 @@ import { IndexedData } from 'minecraft-data'
 
 export function createBot (options: { client: Client } & Partial<BotOptions>): Bot
 export function createBot (options: BotOptions): Bot
+export function createBotAsync (options: { client: Client } & Partial<BotOptions>): Promise<Bot>
+export function createBotAsync (options: BotOptions): Promise<Bot>
 
 export interface BotOptions extends ClientOptions {
   logErrors?: boolean
@@ -33,6 +35,8 @@ export interface BotOptions extends ClientOptions {
   brand?: string
   defaultChatPatterns?: boolean
   respawn?: boolean
+  viaProxy?: boolean
+  forceViaProxy?: boolean
 }
 
 export type ChatLevel = 'enabled' | 'commandsOnly' | 'disabled'
