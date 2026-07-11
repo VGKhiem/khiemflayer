@@ -1,6 +1,6 @@
 {
-  "name": "mineflayer",
-  "version": "4.37.1",
+  "name": "mineflayer-khiem",
+  "version": "1.0.0",
   "description": "create minecraft bots with a stable, high level API",
   "main": "index.js",
   "types": "index.d.ts",
