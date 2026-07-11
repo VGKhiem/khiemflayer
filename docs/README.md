@@ -1,7 +1,7 @@
 # Khiemflayer
 
 [![NPM version](https://img.shields.io/npm/v/khiemflayer.svg?color=success&label=npm%20package&logo=npm)](https://www.npmjs.com/package/khiemflayer)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/VGKhiem/mineflayer-khiem/ci.yml.svg?label=CI&logo=github&logoColor=lightgrey)](https://github.com/VGKhiem/mineflayer-khiem/actions?query=workflow%3A%22CI%22)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/VGKhiem/khiemflayer/ci.yml.svg?label=CI&logo=github&logoColor=lightgrey)](https://github.com/VGKhiem/khiemflayer/actions?query=workflow%3A%22CI%22)
 
 Create Minecraft bots with a powerful, stable, and high level JavaScript [API](api.md), also usable from Python.
 (A custom fork with Native [ViaProxy](https://github.com/lyfegame/mineflayer-viaproxy) Integration).
