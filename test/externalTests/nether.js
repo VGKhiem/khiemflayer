@@ -1,0 +1,60 @@
+const assert = require('assert')
+const Vec3 = require('vec3')
+const { once, sleep, onceWithCleanup } = require('../../lib/promise_utils')
+
+module.exports = () => async (bot) => {
+  // Test spawn event on death
+  const Item = require('prismarine-item')(bot.registry)
+  const portalName = bot.registry.blocksByName.nether_portal ? 'nether_portal' : 'portal'
+
+  let signItem = null
+  for (const name in bot.registry.itemsByName) {
+    if (name.includes('sign') && !name.includes('hanging')) signItem = bot.registry.itemsByName[name]
+  }
+  assert.notStrictEqual(signItem, null)
+
+  const p = new Promise((resolve, reject) => {
+    bot._client.once('open_sign_entity', (packet) => {
+      console.log('Open sign', packet)
+      const sign = bot.blockAt(new Vec3(packet.location))
+      bot.updateSign(sign, '1\n2\n3\n')
+
+      setTimeout(() => {
+        // Get updated sign
+        const sign = bot.blockAt(bot.entity.position)
+        console.log('Updated sign', sign)
+
+        assert.strictEqual(sign.signText.trimEnd(), '1\n2\n3')
+
+        if (sign.blockEntity) {
+          // Check block update
+          bot.activateBlock(sign)
+          assert.notStrictEqual(sign.blockEntity, undefined)
+        }
+
+        bot.chat(`/setblock ~ ~ ~ ${portalName}`)
+        onceWithCleanup(bot, 'spawn', { timeout: 30000 }).then(resolve).catch(reject)
+      }, 500)
+    })
+  })
+
+  bot.chat(`/setblock ~ ~ ~ ${portalName}`)
+  await onceWithCleanup(bot, 'spawn', { timeout: 30000 })
+  bot.test.sayEverywhere('/tp 0 128 0')
+
+  await once(bot, 'forcedMove')
+  await bot.waitForChunksToLoad()
+
+  // Poll until the block below is loaded and non-air before placing.
+  // On slow CI, chunks may report as loaded before block data is ready.
+  let lowerBlock = bot.blockAt(bot.entity.position.offset(0, -1, 0))
+  while (!lowerBlock || lowerBlock.name === 'air') {
+    await sleep(100)
+    lowerBlock = bot.blockAt(bot.entity.position.offset(0, -1, 0))
+  }
+
+  await bot.lookAt(lowerBlock.position, true)
+  await bot.test.setInventorySlot(36, new Item(signItem.id, 1, 0))
+  await bot.placeBlock(lowerBlock, new Vec3(0, 1, 0))
+  await p
+}

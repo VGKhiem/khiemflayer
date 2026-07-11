@@ -1,0 +1,264 @@
+const { Vec3 } = require('vec3')
+
+const { spawn } = require('child_process')
+const { once } = require('../../../lib/promise_utils')
+const process = require('process')
+const assert = require('assert')
+const { sleep, onceWithCleanup } = require('../../../lib/promise_utils')
+
+const timeout = 5000
+module.exports = inject
+
+function inject (bot, wrap) {
+  console.log(bot.version)
+
+  bot.test = {}
+  bot.test.groundY = bot.supportFeature('tallWorld') ? -60 : 4
+  bot.test.sayEverywhere = sayEverywhere
+  bot.test.clearInventory = clearInventory
+  bot.test.becomeSurvival = becomeSurvival
+  bot.test.becomeCreative = becomeCreative
+  bot.test.fly = fly
+  bot.test.teleport = teleport
+  bot.test.resetState = resetState
+  bot.test.setInventorySlot = setInventorySlot
+  bot.test.placeBlock = placeBlock
+  bot.test.runExample = runExample
+  bot.test.tellAndListen = tellAndListen
+  bot.test.selfKill = selfKill
+  bot.test.wait = function (ms) {
+    return new Promise((resolve) => { setTimeout(resolve, ms) })
+  }
+
+  bot.test.awaitItemReceived = async (command) => {
+    const p = once(bot.inventory, 'updateSlot')
+    bot.chat(command)
+    await p // await getting the item
+  }
+  // setting relative to true makes x, y, & z relative using ~
+  bot.test.setBlock = async ({ x = 0, y = 0, z = 0, relative, blockName }) => {
+    const { x: _x, y: _y, z: _z } = relative ? bot.entity.position.floored().offset(x, y, z) : { x, y, z }
+    const block = bot.blockAt(new Vec3(_x, _y, _z))
+    if (block.name === blockName) {
+      return
+    }
+    const p = once(bot.world, `blockUpdate:(${_x}, ${_y}, ${_z})`)
+    const prefix = relative ? '~' : ''
+    bot.chat(`/setblock ${prefix}${x} ${prefix}${y} ${prefix}${z} ${blockName}`)
+    await p
+  }
+
+  let grassName
+  if (bot.supportFeature('itemsAreNotBlocks')) {
+    grassName = 'grass_block'
+  } else if (bot.supportFeature('itemsAreAlsoBlocks')) {
+    grassName = 'grass'
+  }
+
+  const layerNames = [
+    'bedrock',
+    'dirt',
+    'dirt',
+    grassName,
+    'air',
+    'air',
+    'air',
+    'air',
+    'air'
+  ]
+
+  async function resetBlocksToSuperflat () {
+    const groundY = 4
+    for (let y = groundY + 4; y >= groundY - 1; y--) {
+      const realY = y + bot.test.groundY - 4
+      bot.chat(`/fill ~-5 ${realY} ~-5 ~5 ${realY} ~5 ` + layerNames[y])
+    }
+    await bot.test.wait(100)
+  }
+
+  async function placeBlock (slot, position) {
+    bot.setQuickBarSlot(slot - 36)
+    // always place the block on the top of the block below it, i guess.
+    const referenceBlock = bot.blockAt(position.plus(new Vec3(0, -1, 0)))
+    return bot.placeBlock(referenceBlock, new Vec3(0, 1, 0))
+  }
+
+  // always leaves you in creative mode
+  async function resetState () {
+    await becomeCreative()
+    await clearInventory()
+    bot.creative.startFlying()
+    await teleport(new Vec3(0, bot.test.groundY, 0))
+    await bot.waitForChunksToLoad()
+    await resetBlocksToSuperflat()
+    await clearInventory()
+  }
+
+  async function becomeCreative () {
+    // console.log('become creative')
+    return setCreativeMode(true)
+  }
+
+  async function becomeSurvival () {
+    return setCreativeMode(false)
+  }
+
+  async function setCreativeMode (value) {
+    const mode = value ? 'creative' : 'survival'
+    const modeId = value ? 1 : 0
+    if (bot.game.gameMode === mode) return
+    // Use server console for instant, reliable gamemode change.
+    // The old approach (triple chat command + message parsing) was fragile
+    // and the most common source of flaky test timeouts.
+    const gameModePromise = onceWithCleanup(bot._client, 'game_state_change', {
+      timeout,
+      checkCondition: (packet) => {
+        // reason is 3 (number) on old versions, 'change_game_mode' (string) on new
+        const isGameModeChange = packet.reason === 3 || packet.reason === 'change_game_mode'
+        return isGameModeChange && Math.floor(packet.gameMode) === modeId
+      }
+    })
+    wrap.writeServer(`gamemode ${mode} flatbot\n`)
+    await gameModePromise
+  }
+
+  async function clearInventory () {
+    // Use bot.chat for /give (server console /give doesn't send inventory
+    // update packets on 1.21.9+). Use server console for /clear.
+    bot.chat('/give @a stone 1')
+    await onceWithCleanup(bot.inventory, 'updateSlot', {
+      timeout: 10000,
+      checkCondition: (slot, oldItem, newItem) => newItem?.name === 'stone'
+    })
+    const clearMsg = onceWithCleanup(bot, 'message', {
+      timeout: 10000,
+      checkCondition: msg => msg.translate === 'commands.clear.success.single' || msg.translate === 'commands.clear.success'
+    })
+    bot.chat('/clear')
+    await clearMsg
+  }
+
+  // you need to be in creative mode for this to work
+  async function setInventorySlot (targetSlot, item) {
+    assert(item === null || item.name !== 'unknown', `item should not be unknown ${JSON.stringify(item)}`)
+    return bot.creative.setInventorySlot(targetSlot, item)
+  }
+
+  async function teleport (position) {
+    // Use server console for teleport — works even if bot is in a bad state
+    if (bot.supportFeature('hasExecuteCommand')) {
+      wrap.writeServer(`execute in overworld run teleport ${bot.username} ${position.x} ${position.y} ${position.z}\n`)
+    } else {
+      wrap.writeServer(`tp ${bot.username} ${position.x} ${position.y} ${position.z}\n`)
+    }
+    return onceWithCleanup(bot, 'move', {
+      timeout,
+      checkCondition: () => bot.entity.position.distanceTo(position) < 0.9
+    })
+  }
+
+  function sayEverywhere (message) {
+    bot.chat(message)
+    console.log(message)
+  }
+
+  async function fly (delta) {
+    return bot.creative.flyTo(bot.entity.position.plus(delta))
+  }
+
+  async function tellAndListen (to, what, listen) {
+    const chatMessagePromise = onceWithCleanup(bot, 'chat', {
+      timeout,
+      checkCondition: (username, message) => username === to && listen(message)
+    })
+
+    bot.chat(what)
+
+    return chatMessagePromise
+  }
+
+  async function runExample (file, run) {
+    let childBotName
+
+    const detectChildJoin = async () => {
+      const [message] = await onceWithCleanup(bot, 'message', {
+        checkCondition: message => message.json.translate === 'multiplayer.player.joined'
+      })
+      childBotName = message.json.with[0].insertion
+      bot.chat(`/tp ${childBotName} 50 ${bot.test.groundY} 0`)
+      // Wait for the child entity to arrive at the teleport target,
+      // confirming the server has processed the TP
+      const targetPos = new Vec3(50, bot.test.groundY, 0)
+      while (!bot.players[childBotName]?.entity ||
+             bot.players[childBotName].entity.position.distanceTo(targetPos) > 5) {
+        await sleep(100)
+      }
+      // Let the child's physics engine initialize at the new position
+      // (ground detection, chunk processing) before starting the test
+      await bot.waitForTicks(60)
+      bot.chat('loaded')
+    }
+
+    const runExampleOnReady = async () => {
+      await onceWithCleanup(bot, 'chat', {
+        checkCondition: (username, message) => message === 'Ready!'
+      })
+      return run(childBotName)
+    }
+
+    const child = spawn('node', [file, '127.0.0.1', `${bot.test.port}`])
+
+    // Useful to debug child processes:
+    child.stdout.on('data', (data) => { console.log(`${data}`) })
+    child.stderr.on('data', (data) => { console.error(`${data}`) })
+
+    const closeExample = async (err) => {
+      console.log('kill process ' + child.pid)
+
+      try {
+        process.kill(child.pid, 'SIGTERM')
+        const [code] = await onceWithCleanup(child, 'close', { timeout: 5000 })
+        console.log('close requested', code)
+      } catch (e) {
+        console.log(e)
+        console.log('process termination failed, process may already be closed')
+      }
+
+      if (err) {
+        throw err
+      }
+    }
+
+    // Let mocha's test-level timeout (90s) be the backstop instead of
+    // an inner withTimeout, which was causing premature failures on
+    // slow CI runners.
+    try {
+      await Promise.all([detectChildJoin(), runExampleOnReady()])
+    } catch (err) {
+      console.log(err)
+      return closeExample(err)
+    }
+    return closeExample()
+  }
+
+  function selfKill () {
+    bot.chat('/kill @p')
+  }
+
+  // Debug packet IO when tests are re-run with "Enable debug logging" - https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#default-environment-variables
+  if (process.env.RUNNER_DEBUG) {
+    bot._client.on('packet', function (data, meta) {
+      if (['chunk', 'time', 'light', 'alive'].some(e => meta.name.includes(e))) return
+      console.log('->', meta.name, JSON.stringify(data)?.slice(0, 250))
+    })
+    const oldWrite = bot._client.write
+    bot._client.write = function (name, data) {
+      if (['alive', 'pong', 'ping'].some(e => name.includes(e))) return
+      console.log('<-', name, JSON.stringify(data)?.slice(0, 250))
+      oldWrite.apply(bot._client, arguments)
+    }
+      BigInt.prototype.toJSON ??= function () { // eslint-disable-line
+      return this.toString()
+    }
+  }
+}
