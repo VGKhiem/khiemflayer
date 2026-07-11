@@ -86,7 +86,6 @@
       - [Particle.movementSpeed](#particlemovementspeed)
   - [Bot](#bot)
     - [mineflayer.createBot(options)](#mineflayercreatebotoptions)
-    - [mineflayer.createBotAsync(options)](#mineflayercreatebotasyncoptions)
     - [Properties](#properties)
       - [bot.registry](#botregistry)
       - [bot.world](#botworld)
@@ -793,13 +792,11 @@ Particle speed in a random direction
 
 ## Bot
 
-### mineflayer.createBotAsync(options)
-
-Create and return a Promise that resolves to an instance of the class bot. This function is required if you are using `viaProxy` or `forceViaProxy`, because starting the proxy process is asynchronous.
-
 ### mineflayer.createBot(options)
 
-Create and return an instance of the class bot. (Note: Will throw an error if `viaProxy` is set to true).
+Create and return an instance of the class bot.
+**Note**: If `options.viaProxy` is `true`, this function will instead return a `Promise<Bot>` that resolves to the bot instance after the proxy is fully started. You must `await` it.
+
 `options` is an object containing the optional properties :
  * username : default to 'Player'
  * port : default to 25565

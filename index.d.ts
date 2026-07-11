@@ -12,10 +12,9 @@ import { world } from 'prismarine-world'
 import { Registry } from 'prismarine-registry'
 import { IndexedData } from 'minecraft-data'
 
-export function createBot (options: { client: Client } & Partial<BotOptions>): Bot
-export function createBot (options: BotOptions): Bot
-export function createBotAsync (options: { client: Client } & Partial<BotOptions>): Promise<Bot>
-export function createBotAsync (options: BotOptions): Promise<Bot>
+export function createBot (options: { client: Client, viaProxy?: false, forceViaProxy?: false } & Partial<BotOptions>): Bot
+export function createBot (options: { viaProxy: true } | { forceViaProxy: true } & Partial<BotOptions>): Promise<Bot>
+export function createBot (options: BotOptions): Bot | Promise<Bot>
 
 export interface BotOptions extends ClientOptions {
   logErrors?: boolean
