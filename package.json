@@ -10,7 +10,7 @@
     "pretest": "npm run lint",
     "lint": "standard && standard-markdown",
     "fix": "standard --fix && standard-markdown --fix",
-    "prepublishOnly": "cp docs/README.md README.md"
+    "prepublishOnly": "node -e \"require('fs').copyFileSync('docs/README.md', 'README.md')\""
   },
   "repository": {
     "type": "git",
