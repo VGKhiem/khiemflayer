@@ -1,6 +1,6 @@
-# Mineflayer-khiem
+# Khiemflayer
 
-[![NPM version](https://img.shields.io/npm/v/mineflayer-khiem.svg?color=success&label=npm%20package&logo=npm)](https://www.npmjs.com/package/mineflayer-khiem)
+[![NPM version](https://img.shields.io/npm/v/khiemflayer.svg?color=success&label=npm%20package&logo=npm)](https://www.npmjs.com/package/khiemflayer)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/VGKhiem/mineflayer-khiem/ci.yml.svg?label=CI&logo=github&logoColor=lightgrey)](https://github.com/VGKhiem/mineflayer-khiem/actions?query=workflow%3A%22CI%22)
 
 Create Minecraft bots with a powerful, stable, and high level JavaScript [API](api.md), also usable from Python.
@@ -28,7 +28,7 @@ First time using Node.js? You may want to start with the [tutorial](tutorial.md)
 First install Node.js >= 18 from [nodejs.org](https://nodejs.org/) then:
 
 ```bash
-npm install mineflayer
+npm install khiemflayer
 ```
 
 To update mineflayer (or any Node.js) package and its dependencies, use 
@@ -115,13 +115,13 @@ const client = mineflayer.createBot({
 
 #### Connecting with [ViaProxy](https://github.com/lyfegame/mineflayer-viaproxy)
 
-To join a server on a version not natively supported by your `mineflayer-khiem` instance, or even a Bedrock server, you can use `createBotAsync` which spins up a proxy automatically.
+To join a server on a version not natively supported by your `khiemflayer` instance, or even a Bedrock server, you can pass `viaProxy: true` to `createBot` which spins up a proxy automatically. Note that doing this makes `createBot` return a Promise instead of a Bot instance directly!
 
 ```js
-const mineflayer = require('mineflayer-khiem')
+const mineflayer = require('khiemflayer')
 
 async function startBot() {
-  const bot = await mineflayer.createBotAsync({
+  const bot = await mineflayer.createBot({
     host: 'localhost', 
     username: 'Bot',
     viaProxy: true, // Automagically use ViaProxy to connect
