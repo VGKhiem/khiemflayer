@@ -1,21 +1,21 @@
 # Mineflayer
 
 [![NPM version](https://badge.fury.io/js/mineflayer.svg)](http://badge.fury.io/js/mineflayer)
-[![Build Status](https://github.com/PrismarineJS/mineflayer/workflows/CI/badge.svg)](https://github.com/PrismarineJS/mineflayer/actions?query=workflow%3A%22CI%22)
+[![Build Status](https://github.com/VGKhiem/mineflayer-khiem/workflows/CI/badge.svg)](https://github.com/VGKhiem/mineflayer-khiem/actions?query=workflow%3A%22CI%22)
 [![Discord](https://img.shields.io/badge/chat-on%20discord-brightgreen.svg)](https://discord.gg/GsEFRM8)
 [![Gitter](https://img.shields.io/badge/chat-on%20gitter-brightgreen.svg)](https://gitter.im/PrismarineJS/general)
 [![Irc](https://img.shields.io/badge/chat-on%20irc-brightgreen.svg)](https://irc.gitter.im/)
-[![Issue Hunt](https://github.com/BoostIO/issuehunt-materials/blob/master/v1/issuehunt-shield-v1.svg)](https://issuehunt.io/r/PrismarineJS/mineflayer)
+[![Issue Hunt](https://github.com/BoostIO/issuehunt-materials/blob/master/v1/issuehunt-shield-v1.svg)](https://issuehunt.io/r/VGKhiem/mineflayer-khiem)
 
-[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/PrismarineJS/mineflayer)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PrismarineJS/mineflayer/blob/master/docs/mineflayer.ipynb)
+[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/VGKhiem/mineflayer-khiem)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/VGKhiem/mineflayer-khiem/blob/master/docs/mineflayer.ipynb)
 
 | <sub>EN</sub> [English](../README.md) | <sub>RU</sub> [русский](../ru/README_RU.md) | <sub>ES</sub> [Español](../es/README_ES.md) | <sub>FR</sub> [Français](../fr/README_FR.md) | <sub>TR</sub> [Türkçe](../tr/README_TR.md) | <sub>ZH</sub> [中文](../zh/README_ZH_CN.md) | <sub>BR</sub> [Portuguese](../br/README_BR.md) |
 |-------------------------|----------------------------|----------------------------|----------------------------|----------------------------|----------------------------|----------------------------|
 
 使用强大、稳定、高级的 JavaScript [API](../api.md) 来开发 Minecraft 机器人，同时支持 Python。
 
-第一次使用 node.js ？你可以先看看 [使用教程](../tutorial.md) 。了解过 Python？这里有一些 [Python 实例](https://github.com/PrismarineJS/mineflayer/tree/master/examples/python)，同时你也可以[在谷歌 Colab 中运行 Mineflayer](https://colab.research.google.com/github/PrismarineJS/mineflayer/blob/master/docs/mineflayer.ipynb) 来体验一下。
+第一次使用 node.js ？你可以先看看 [使用教程](../tutorial.md) 。了解过 Python？这里有一些 [Python 实例](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples/python)，同时你也可以[在谷歌 Colab 中运行 Mineflayer](https://colab.research.google.com/github/VGKhiem/mineflayer-khiem/blob/master/docs/mineflayer.ipynb) 来体验一下。
 
 ## 特点
 
@@ -33,7 +33,7 @@
 
 ### 路线图
 
- [点这里](https://github.com/PrismarineJS/mineflayer/wiki/Big-Prismarine-projects) 看看目前我们有哪些实用的项目
+ [点这里](https://github.com/VGKhiem/mineflayer-khiem/wiki/Big-Prismarine-projects) 看看目前我们有哪些实用的项目
 
 ## 安装
 
@@ -41,7 +41,7 @@
 
 然后在你创建的bot项目目录中，使用命令行运行：
 
-`npm install mineflayer`
+`npm install mineflayer-khiem`
 
 ## 文档
 
@@ -51,7 +51,7 @@
 | [FAQ](../FAQ.md) | 使用中出现问题？先看看这个文档吧 |
 | [api](../api.md)、[不稳定的api](../unstable_api.md) | 完整的接口参考文档 |
 | [更新日志](../history.md) | mineflayer 的更新日志 |
-| [示例/](https://github.com/PrismarineJS/mineflayer/tree/master/examples) | 我们为你准备的 mineflayer 使用实例 |
+| [示例/](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples) | 我们为你准备的 mineflayer 使用实例 |
 
 ## 参与贡献
 
@@ -78,7 +78,7 @@
 ### 例子：复读机
 
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 
 const bot = mineflayer.createBot({
   host: 'localhost', // minecraft 服务器的 IP 地址
@@ -119,17 +119,17 @@ bot.once('spawn', () => {
 
 | 例子 | 描述 |
 |---|---|
-|[viewer](https://github.com/PrismarineJS/mineflayer/tree/master/examples/viewer) | 在浏览器中显示 bot 的视角 |
-|[pathfinder](https://github.com/PrismarineJS/mineflayer/tree/master/examples/pathfinder) | 让你的 bot 自动前往任何地点  |
-|[chest](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chest.js) | 使用箱子、熔炉、酿造台、附魔台 |
-|[digger](https://github.com/PrismarineJS/mineflayer/blob/master/examples/digger.js) | 学习如何创建一个能够挖掘方块的简单bot |
-|[discord](https://github.com/PrismarineJS/mineflayer/blob/master/examples/discord.js) | 将 discord bot 与 mineflayer bot 进行消息互通 |
-|[jumper](https://github.com/PrismarineJS/mineflayer/blob/master/examples/jumper.js) | 学习如何移动、跳跃、骑乘载具、攻击附近的实体 |
-|[ansi](https://github.com/PrismarineJS/mineflayer/blob/master/examples/ansi.js) | 使用全彩色在命令行中显示 bot 的聊天记录 |
-|[guard](https://github.com/PrismarineJS/mineflayer/blob/master/examples/guard.js) | 让bot守卫一个指定的区域，不让附近的生物进入。 |
-|[multiple-from-file](https://github.com/PrismarineJS/mineflayer/blob/master/examples/multiple_from_file.js) | 创建一个包含账户信息的文本文件，让它们全部同时登录 |
+|[viewer](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples/viewer) | 在浏览器中显示 bot 的视角 |
+|[pathfinder](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples/pathfinder) | 让你的 bot 自动前往任何地点  |
+|[chest](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chest.js) | 使用箱子、熔炉、酿造台、附魔台 |
+|[digger](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/digger.js) | 学习如何创建一个能够挖掘方块的简单bot |
+|[discord](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/discord.js) | 将 discord bot 与 mineflayer bot 进行消息互通 |
+|[jumper](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/jumper.js) | 学习如何移动、跳跃、骑乘载具、攻击附近的实体 |
+|[ansi](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/ansi.js) | 使用全彩色在命令行中显示 bot 的聊天记录 |
+|[guard](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/guard.js) | 让bot守卫一个指定的区域，不让附近的生物进入。 |
+|[multiple-from-file](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/multiple_from_file.js) | 创建一个包含账户信息的文本文件，让它们全部同时登录 |
 
-还有更多的例子在 [examples](https://github.com/PrismarineJS/mineflayer/tree/master/examples) 文件夹中
+还有更多的例子在 [examples](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples) 文件夹中
 
 ### 模块
 
@@ -221,8 +221,8 @@ mineflayer 支持插件；任何人都可以创建一个插件，在 mineflayer 
 * [Cheese Bot](https://github.com/Minecheesecraft/Cheese-Bot) -  基于插件的机器人，具有干净的 GUI。使用 Node-Webkit 制作。
 * [Chaoscraft](https://github.com/schematical/chaoscraft) - 使用遗传算法的 Minecraft 机器人，请参阅 [Youtube](https://www.youtube.com/playlist?list=PLLkpLgU9B5xJ7Qy4kOyBJl5J6zsDIMceH)
 * [hexatester/minetelegram](https://github.com/hexatester/minetelegram) -  Minecraft - Telegram 消息互通，基于 mineflayer & telegraf.
-* [PrismarineJS/mineflayer-builder](https://github.com/PrismarineJS/mineflayer-builder) - 在生存中打印我的世界示意图，保持方向
-* [以及数千个](https://github.com/PrismarineJS/mineflayer/network/dependents) - github 检测到的在使用 mineflayer 的项目
+* [VGKhiem/mineflayer-khiem-builder](https://github.com/VGKhiem/mineflayer-khiem-builder) - 在生存中打印我的世界示意图，保持方向
+* [以及数千个](https://github.com/VGKhiem/mineflayer-khiem/network/dependents) - github 检测到的在使用 mineflayer 的项目
 
 ## 测试
 

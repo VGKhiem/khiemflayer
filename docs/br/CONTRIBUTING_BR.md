@@ -10,7 +10,7 @@ Temos 3 etiquetas para 3 fases de organização de problemas:
 * Estágio 2: (Fase 2) ideia promissora, mas é necessário pensar mais sobre o assunto antes de implementá-lo
 * Estágio 3: (Fase 3) a ideia é muito precisa, só precisa ser programada
 
-Links como https://github.com/PrismarineJS/mineflayer/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 podem ser usados como filtro para a fase 1 se você estiver procurando coisas prontas para serem contribuídas.
+Links como https://github.com/VGKhiem/mineflayer-khiem/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 podem ser usados como filtro para a fase 1 se você estiver procurando coisas prontas para serem contribuídas.
 
 ## Criando Testes
 O Mineflayer possui dois tipos de testes:
@@ -24,7 +24,7 @@ O objetivo desses testes é determinar automaticamente o que funciona e o que n�
 
 Para criar um teste externo, basta criar um arquivo em [test/externalTests](test/externalTests).
 
-Um exemplo: [test/externalTests/digAndBuild.js](https://github.com/PrismarineJS/mineflayer/blob/master/test/externalTests/digAndBuild.js)
+Um exemplo: [test/externalTests/digAndBuild.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/test/externalTests/digAndBuild.js)
 
 Esse arquivo deve exportar uma função que retorna uma função ou um array de funções que recebem o objeto bot e um callback como parâmetros, e deve conter verificações para determinar se a função testada falhou.
 

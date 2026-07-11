@@ -12,7 +12,7 @@ Tenemos 3 etiquetas para 3 fases de organizar los problemas:
 * Stage 2: (Fase 2) idea prometedora, pero se necesita pensar más sobre el tema antes de implementarlo
 * Stage 3: (Fase 3) la idea es muy precisa, solo hace falta programarlo
 
-Los links como https://github.com/PrismarineJS/mineflayer/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 se pueden usar como filtro para la fase 1 si estás buscando cosas que están listas para que sean contribuidas
+Los links como https://github.com/VGKhiem/mineflayer-khiem/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 se pueden usar como filtro para la fase 1 si estás buscando cosas que están listas para que sean contribuidas
 
 ## Creando tests
 Mineflayer tiene dos tipos de tests :
@@ -26,7 +26,7 @@ El objectivo de estos tests es saber automáticamente qué funciona y qué no fu
 
 Para crear un test externo solo tienes que crear un archivo en [test/externalTests](test/externalTests)
 
-Un ejemplo : [test/externalTests/digAndBuild.js](https://github.com/PrismarineJS/mineflayer/blob/master/test/externalTests/digAndBuild.js)
+Un ejemplo : [test/externalTests/digAndBuild.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/test/externalTests/digAndBuild.js)
 
 Ese archivo tiene que exportar una función que devuelve una función o un array de funciones que necesitan como parámetros el object de bot y un callback para cuando haya finalizado, debería contener asserts para saber si la función testeada ha fallado.
 

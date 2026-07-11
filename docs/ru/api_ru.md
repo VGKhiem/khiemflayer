@@ -1737,7 +1737,7 @@ const cow = bot.nearestEntity(entity => entity.name.toLowerCase() === 'cow') // 
 
 Возвращает число, которое используется методом `bot.removeChatPattern()` лишь для того, чтобы можно было удалить этот шаблон.
 
- - :eyes: см. [examples/chat_parsing](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chat_parsing.js#L17-L36)
+ - :eyes: см. [examples/chat_parsing](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js#L17-L36)
 
 #### bot.addChatPatternSet(name, patterns, chatPatternOptions)
 
@@ -1751,7 +1751,7 @@ const cow = bot.nearestEntity(entity => entity.name.toLowerCase() === 'cow') // 
 
 Возвращает число, которое используется методом `bot.removeChatPattern()` лишь для того, чтобы можно было удалить этот шаблон.
 
- - :eyes: см. [examples/chat_parsing](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chat_parsing.js#L17-L36)
+ - :eyes: см. [examples/chat_parsing](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js#L17-L36)
 
 #### bot.removeChatPattern(name)
 
@@ -2134,7 +2134,7 @@ bot.once('login', () => {
 
 Может использоваться для проверки особой для текущей версии Майнкрафт возможности. Обычно это требуется только для обработки функций, зависящих от версии.
 
-Список возможностей можно найти в файле [./lib/features.json](https://github.com/PrismarineJS/mineflayer/blob/master/lib/features.json).
+Список возможностей можно найти в файле [./lib/features.json](https://github.com/VGKhiem/mineflayer-khiem/blob/master/lib/features.json).
 
 #### bot.waitForTicks(ticks)
 

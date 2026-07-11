@@ -25,7 +25,7 @@ client.on('end', () => {})
 ### Я не получаю событие чата на сервере, как я могу это решить?
 
 Сервера Spigot, в частности некоторые плагины, используют разные форматы чата, вам необходимо проанализировать его с помощью регулярного выражения/парсера.
-Посмотрите и измените скрипт [chat_parsing.js](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chat_parsing.js), чтобы он работал для вашего плагина на чат, также прочтите http://prismarinejs.github.io/mineflayer/#/tutorial?id=custom-chat
+Посмотрите и измените скрипт [chat_parsing.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js), чтобы он работал для вашего плагина на чат, также прочтите http://prismarinejs.github.io/mineflayer/#/tutorial?id=custom-chat
 
 ### Как я могу собрать информацию из плагина в чате?
 
@@ -76,7 +76,7 @@ bot.chat('/give @p diamond')
 
 ### Можно ли войти в несколько учетных записей с помощью bot = mineflayer.createbot, контролируя их все по отдельности?
 
-Создавайте разные экземпляры ботов, вызывая createBot, затем выполняйте разные действия для каждого. [Пример](https://github.com/PrismarineJS/mineflayer/blob/master/examples/multiple.js).
+Создавайте разные экземпляры ботов, вызывая createBot, затем выполняйте разные действия для каждого. [Пример](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/multiple.js).
 
 ### Как заставить бота выбросить все вещи их инвентаря?
 
@@ -84,11 +84,11 @@ bot.chat('/give @p diamond')
 
 ### Как проверить отправленные/полученные пакеты?
 
-Включите отладку https://github.com/PrismarineJS/mineflayer#debug
+Включите отладку https://github.com/VGKhiem/mineflayer-khiem#debug
 
 ### Я хочу избежать отключения бота от сервера даже в случае задержки сервера, как мне этого добиться?
 
-Один из способов - увеличить параметр [checkTimeoutInterval](https://github.com/PrismarineJS/node-minecraft-protocol/blob/master/docs/API.md#mccreateclientoptions) (передаваемый в createBot) к более высокому значению (Например `300*1000`, что составляет 5 минут вместо обычных 30 сек.). Если вы всё ещё сталкиваетесь с данной проблемой, вы можете автоматически переподключиться, используя что-то вроде этого примера https://github.com/PrismarineJS/mineflayer/blob/master/examples/reconnector.js
+Один из способов - увеличить параметр [checkTimeoutInterval](https://github.com/PrismarineJS/node-minecraft-protocol/blob/master/docs/API.md#mccreateclientoptions) (передаваемый в createBot) к более высокому значению (Например `300*1000`, что составляет 5 минут вместо обычных 30 сек.). Если вы всё ещё сталкиваетесь с данной проблемой, вы можете автоматически переподключиться, используя что-то вроде этого примера https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/reconnector.js
 
 ### Как получить описание/текст предмета?
 
@@ -120,7 +120,7 @@ function getLore (item) {
 
 ### Как я могу отправить сообщение из консоли на сервер?
 
-Вы можете использовать библиотеку, такую как `repl`, чтобы прочитать ввод консоли и использовать `bot.chat()` для его отправки. Вы можете найти пример [здесь](https://github.com/PrismarineJS/mineflayer/blob/master/examples/repl.js).
+Вы можете использовать библиотеку, такую как `repl`, чтобы прочитать ввод консоли и использовать `bot.chat()` для его отправки. Вы можете найти пример [здесь](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/repl.js).
 
 ### Как я могу использовать другой плагин в качестве зависимости при создании своего плагина?
 

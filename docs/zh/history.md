@@ -538,7 +538,7 @@ lot of new features from @wvffle :
 ## 1.5.2
 
  * use prismarine-recipe and prismarine-windows
- * use require-self to be able to do require('mineflayer') in the examples
+ * use require-self to be able to do require('mineflayer-khiem') in the examples
  * fix viewDistance sending
 
 ## 1.5.1

@@ -1,12 +1,12 @@
 # Mineflayer
 
 [![NPM version](https://badge.fury.io/js/mineflayer.svg)](http://badge.fury.io/js/mineflayer)
-[![Build Status](https://github.com/PrismarineJS/mineflayer/workflows/CI/badge.svg)](https://github.com/PrismarineJS/mineflayer/actions?query=workflow%3A%22CI%22)
+[![Build Status](https://github.com/VGKhiem/mineflayer-khiem/workflows/CI/badge.svg)](https://github.com/VGKhiem/mineflayer-khiem/actions?query=workflow%3A%22CI%22)
 [![Discord](https://img.shields.io/badge/chat-on%20discord-brightgreen.svg)](https://discord.gg/GsEFRM8)
 [![Gitter](https://img.shields.io/badge/chat-on%20gitter-brightgreen.svg)](https://gitter.im/PrismarineJS/general)
 [![Irc](https://img.shields.io/badge/chat-on%20irc-brightgreen.svg)](https://irc.gitter.im/)
 
-[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/PrismarineJS/mineflayer)
+[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/VGKhiem/mineflayer-khiem)
 
 | <sub>EN</sub> [English](../README.md) | <sub>RU</sub> [русский](../ru/README_RU.md) | <sub>ES</sub> [Español](../es/README_ES.md) | <sub>FR</sub> [Français](../fr/README_FR.md) | <sub>TR</sub> [Türkçe](../tr/README_TR.md) | <sub>ZH</sub> [中文](../zh/README_ZH_CN.md) | <sub>BR</sub> [Português](../br/README_BR.md) |
 |-------------------------|----------------------------|----------------------------|----------------------------|----------------------------|----------------------------|----------------------------|
@@ -31,12 +31,12 @@ Crea bots para Minecraft con una API de JavaScript potente, estable y de alto ni
 
 ### Planes para el futuro
 
-Echa un vistazo a nuestros [proyectos actuales](https://github.com/PrismarineJS/mineflayer/wiki/Big-Prismarine-projects)
+Echa un vistazo a nuestros [proyectos actuales](https://github.com/VGKhiem/mineflayer-khiem/wiki/Big-Prismarine-projects)
 
 ## Instalación
 Primero instala Node.js >= 18 desde [nodejs.org](https://nodejs.org/)
 
-`npm install mineflayer`
+`npm install mineflayer-khiem`
 
 ## Documentación
 
@@ -46,7 +46,7 @@ Primero instala Node.js >= 18 desde [nodejs.org](https://nodejs.org/)
 | [FAQ.md](FAQ_ES.md) | Alguna duda? Echa un vistazo a esto |
 | [api.md](api_es.md) [unstable_api.md](unstable_api_es.md) | Toda la documentación de la API |
 | [history.md](../history.md) | Historial de cambios de Mineflayer |
-| [examples/](https://github.com/PrismarineJS/mineflayer/tree/master/examples) | Todos los ejemplos de mineflayer |
+| [examples/](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples) | Todos los ejemplos de mineflayer |
 
 ## Contribuir
 
@@ -71,7 +71,7 @@ Si no se especifica una versión, la versión del servidor se detectará automá
 
 ### Ejemplo: echo
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 
 const bot = mineflayer.createBot({
   host: 'localhost', // ip del servidor de minecraft
@@ -110,17 +110,17 @@ Y podrás ver una representación *en vivo* como esta:
 
 | ejemplo | descripción |
 |---|---|
-|[viewer](https://github.com/PrismarineJS/mineflayer/tree/master/examples/viewer) | Visualiza lo que ve tu bot en el buscador |
+|[viewer](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples/viewer) | Visualiza lo que ve tu bot en el buscador |
 |[pathfinder](https://github.com/Karang/mineflayer-pathfinder/blob/master/examples/test.js) | Haz que tu bot vaya a cualquier ubicación automáticamente |
-|[chest](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chest.js) | Aprende a usar cofres, hornos, dispensadores y mesas de encantamiento |
-|[digger](https://github.com/PrismarineJS/mineflayer/blob/master/examples/digger.js) | Aprende como crear un bot que pueda romper un bloque |
-|[discord](https://github.com/PrismarineJS/mineflayer/blob/master/examples/discord.js) | Conecta un bot de discord con un bot de mineflayer |
-|[jumper](https://github.com/PrismarineJS/mineflayer/blob/master/examples/jumper.js) | Aprende a moverte, saltar, ir en vehiculos y atacar entidades cercanas |
-|[ansi](https://github.com/PrismarineJS/mineflayer/blob/master/examples/ansi.js) | Muestra todos los mensajes que mandan al chat en tu consola con sus colores correspondientes |
-|[guard](https://github.com/PrismarineJS/mineflayer/blob/master/examples/guard.js) | Haz un bot que defienda un área predefinida de mobs |
-|[multiple-from-file](https://github.com/PrismarineJS/mineflayer/blob/master/examples/multiple_from_file.js) | Usa un archivo de texto con cuentas para crear bots |
+|[chest](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chest.js) | Aprende a usar cofres, hornos, dispensadores y mesas de encantamiento |
+|[digger](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/digger.js) | Aprende como crear un bot que pueda romper un bloque |
+|[discord](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/discord.js) | Conecta un bot de discord con un bot de mineflayer |
+|[jumper](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/jumper.js) | Aprende a moverte, saltar, ir en vehiculos y atacar entidades cercanas |
+|[ansi](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/ansi.js) | Muestra todos los mensajes que mandan al chat en tu consola con sus colores correspondientes |
+|[guard](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/guard.js) | Haz un bot que defienda un área predefinida de mobs |
+|[multiple-from-file](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/multiple_from_file.js) | Usa un archivo de texto con cuentas para crear bots |
 
-Más ejemplos en la carpeta de [ejemplos](https://github.com/PrismarineJS/mineflayer/tree/master/examples)
+Más ejemplos en la carpeta de [ejemplos](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples)
 
 ### Módulos
 
@@ -207,7 +207,7 @@ Pero también echa un vistazo a:
  * [Cheese Bot](https://github.com/Minecheesecraft/Cheese-Bot) - bot con una interfaz limpia. Hecho con Node-Webkit. http://bot.ezcha.net/
  * [Chaoscraft](https://github.com/schematical/chaoscraft) - bot de Minecraft que utiliza algoritmos genéticos, ver [sus videos de youtube](https://www.youtube.com/playlist?list=PLLkpLgU9B5xJ7Qy4kOyBJl5J6zsDIMceH)
  * [hexatester/minetelegram](https://github.com/hexatester/minetelegram) -  puente para Telegram, hecho con Mineflayer y Telegraf.
- * [and hundreds more](https://github.com/PrismarineJS/mineflayer/network/dependents) - todos los proyectos que usan mineflayer y que han sido detectados por github
+ * [and hundreds more](https://github.com/VGKhiem/mineflayer-khiem/network/dependents) - todos los proyectos que usan mineflayer y que han sido detectados por github
 
 ## Pruebas
 

@@ -13,7 +13,7 @@ client.on('end', () => {})
 
 ## Meu evento de chat não está sendo emitido em um servidor personalizado. Como posso resolver isso?
 
-Alguns servidores Spigot, em particular certos plugins, utilizam formatos personalizados de chat. Nesse caso, é necessário analisar esses formatos com expressões regulares personalizadas. Recomenda-se ler e modificar o arquivo [chat_parsing.js](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chat_parsing.js) para que funcione com o plugin de chat específico do seu servidor. Você também pode consultar http://prismarinejs.github.io/mineflayer/#/tutorial?id=custom-chat para obter mais informações.
+Alguns servidores Spigot, em particular certos plugins, utilizam formatos personalizados de chat. Nesse caso, é necessário analisar esses formatos com expressões regulares personalizadas. Recomenda-se ler e modificar o arquivo [chat_parsing.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js) para que funcione com o plugin de chat específico do seu servidor. Você também pode consultar http://prismarinejs.github.io/mineflayer/#/tutorial?id=custom-chat para obter mais informações.
 
 ## Como posso coletar informações de um plugin de chat personalizado?
 
@@ -74,11 +74,11 @@ Você pode usar a função `bot.inventory.items()` para obter uma matriz dos ite
 
 ### Como vejo os pacotes que foram enviados/recebidos?
 
-Você pode ativar o modo de depuração. Para obter mais informações, consulte [este link](https://github.com/PrismarineJS/mineflayer/blob/master/docs/br/README_BR.md#depuraci%C3%B3n).
+Você pode ativar o modo de depuração. Para obter mais informações, consulte [este link](https://github.com/VGKhiem/mineflayer-khiem/blob/master/docs/br/README_BR.md#depuraci%C3%B3n).
 
 ### Quero evitar desconexões devido a lag no servidor, como posso fazer isso?
 
-Uma maneira de evitar desconexões devido à latência no servidor é aumentar o valor na opção `checkTimeoutInterval` (por exemplo, `300*1000`, que representa 5 minutos, em vez do valor padrão, que é 30 segundos). Se mesmo assim você continuar sendo desconectado do servidor, você pode se reconectar automaticamente usando este exemplo [aqui](https://github.com/PrismarineJS/mineflayer/blob/master/examples/reconnector.js).
+Uma maneira de evitar desconexões devido à latência no servidor é aumentar o valor na opção `checkTimeoutInterval` (por exemplo, `300*1000`, que representa 5 minutos, em vez do valor padrão, que é 30 segundos). Se mesmo assim você continuar sendo desconectado do servidor, você pode se reconectar automaticamente usando este exemplo [aqui](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/reconnector.js).
 
 ### Como posso obter a descrição/texto de um item?
 
@@ -110,7 +110,7 @@ function getLore (item) {
 
 ### Como posso enviar uma mensagem do console para o servidor?
 
-Você pode usar uma biblioteca como `repl` para ler o que você escreve no console e usar `bot.chat()` para enviá-lo para o servidor. Você pode encontrar um exemplo [aqui](https://github.com/PrismarineJS/mineflayer/blob/master/examples/repl.js).
+Você pode usar uma biblioteca como `repl` para ler o que você escreve no console e usar `bot.chat()` para enviá-lo para o servidor. Você pode encontrar um exemplo [aqui](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/repl.js).
 
 ### Ao criar um plugin, como posso especificar outro plugin como dependência?
 

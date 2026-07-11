@@ -15,7 +15,7 @@ client.on('end', () => {})
 ## Mi evento de chat no se emite en un servidor personalizado, cómo lo resuelvo?
 
 Los servidores spigot, en particular algunos plugins, usan formatos personalizados de chat, tienes que analizarlos con un regex personalizado.
-Lee y modifica [chat_parsing.js](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chat_parsing.js) para que funcione con tu plugin de chat particular. Lee también http://prismarinejs.github.io/mineflayer/#/tutorial?id=custom-chat
+Lee y modifica [chat_parsing.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js) para que funcione con tu plugin de chat particular. Lee también http://prismarinejs.github.io/mineflayer/#/tutorial?id=custom-chat
 
 ### Como puedo recolectar información de un plugin de chat personalizado?
 
@@ -74,11 +74,11 @@ bot.inventory.items() te proporciona un array de los ítems del bot. Puedes usar
 
 ### Como veo los paquetes que con mandados/recibidos?
 
-Activa el modo de depuración https://github.com/PrismarineJS/mineflayer/blob/master/docs/es/README_ES.md#depuraci%C3%B3n
+Activa el modo de depuración https://github.com/VGKhiem/mineflayer-khiem/blob/master/docs/es/README_ES.md#depuraci%C3%B3n
 
 ### Quiero prevenir una desconexión en caso de lag en el servidor, como puedo hacerlo?
 
-Una forma de hacerlo es aumentar el valor en la opción [checkTimeoutInterval](https://github.com/PrismarineJS/node-minecraft-protocol/blob/master/docs/API.md#mccreateclientoptions) (por ejemplo `300*1000` que es 5 minutos en vez del valor predeterminado, que es 30 segundos). Si con eso todavía te desconecta del servidor, puedes reconectarte automáticamente con este ejemplo https://github.com/PrismarineJS/mineflayer/blob/master/examples/reconnector.js
+Una forma de hacerlo es aumentar el valor en la opción [checkTimeoutInterval](https://github.com/PrismarineJS/node-minecraft-protocol/blob/master/docs/API.md#mccreateclientoptions) (por ejemplo `300*1000` que es 5 minutos en vez del valor predeterminado, que es 30 segundos). Si con eso todavía te desconecta del servidor, puedes reconectarte automáticamente con este ejemplo https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/reconnector.js
 
 ### Como puedo obtener el lore / texto de un ítem?
 
@@ -110,7 +110,7 @@ function getLore (item) {
 
 ### Como puedo mandar un mensaje de la consola al servidor?
 
-Puedes usar una librería como `repl` para leer lo que escribes en la consola y usar `bot.chat()` para mandarlo al servidor. Puedes encontrar un ejemplo [aquí](https://github.com/PrismarineJS/mineflayer/blob/master/examples/repl.js)
+Puedes usar una librería como `repl` para leer lo que escribes en la consola y usar `bot.chat()` para mandarlo al servidor. Puedes encontrar un ejemplo [aquí](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/repl.js)
 
 ### Cuando creo un plugin, como puedo especificar otro plugin como dependencia?
 

@@ -1,13 +1,13 @@
 # Mineflayer
 
 [![NPM version](https://badge.fury.io/js/mineflayer.svg)](http://badge.fury.io/js/mineflayer)
-[![Build Status](https://github.com/PrismarineJS/mineflayer/workflows/CI/badge.svg)](https://github.com/PrismarineJS/mineflayer/actions?query=workflow%3A%22CI%22)
+[![Build Status](https://github.com/VGKhiem/mineflayer-khiem/workflows/CI/badge.svg)](https://github.com/VGKhiem/mineflayer-khiem/actions?query=workflow%3A%22CI%22)
 [![Discord](https://img.shields.io/badge/chat-on%20discord-brightgreen.svg)](https://discord.gg/GsEFRM8)
 [![Gitter](https://img.shields.io/badge/chat-on%20gitter-brightgreen.svg)](https://gitter.im/PrismarineJS/general)
 [![Irc](https://img.shields.io/badge/chat-on%20irc-brightgreen.svg)](https://irc.gitter.im/)
-[![Issue Hunt](https://github.com/BoostIO/issuehunt-materials/blob/master/v1/issuehunt-shield-v1.svg)](https://issuehunt.io/r/PrismarineJS/mineflayer)
+[![Issue Hunt](https://github.com/BoostIO/issuehunt-materials/blob/master/v1/issuehunt-shield-v1.svg)](https://issuehunt.io/r/VGKhiem/mineflayer-khiem)
 
-[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/PrismarineJS/mineflayer)
+[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/VGKhiem/mineflayer-khiem)
 
 | <sub>EN</sub> [Anglais](../README.md) | <sub>RU</sub> [Russe](../ru/README_RU.md) | <sub>ES</sub> [Espagnol](../es/README_ES.md) | <sub>FR</sub> [Français](README_FR.md) | <sub>TR</sub> [Türkçe](../tr/README_TR.md) | <sub>ZH</sub> [Chinois](../zh/README_ZH_CN.md) | <sub>BR</sub> [Portuguese](../br/README_BR.md) |
 |-------------------------|----------------------------|----------------------------|----------------------------|----------------------------|----------------------------|----------------------------|
@@ -32,13 +32,13 @@ Si c'est la première fois que vous utilisez Node.js, il vaut mieux commencer av
 
 ### Projets à venir:
 
- Visite cette page pour voir nos projets [projets](https://github.com/PrismarineJS/mineflayer/wiki/Big-Prismarine-projects). 
+ Visite cette page pour voir nos projets [projets](https://github.com/VGKhiem/mineflayer-khiem/wiki/Big-Prismarine-projects). 
  
 ## Installation
 
 En premier installer Node.js (version minimale requise: 14) sur [nodejs.org](https://nodejs.org/) puis taper dans la console:
 
-`npm install mineflayer`
+`npm install mineflayer-khiem`
 
 ## Documentation
 
@@ -48,7 +48,7 @@ En premier installer Node.js (version minimale requise: 14) sur [nodejs.org](htt
 | [FAQ](FAQ.md) | Une question? Regardez d'abord ici ! |
 | [API](api.md) [unstable_api.md](unstable_api.md) | L'API intégrale |
 | [changement](history.md) | Les derniers changements dans mineflayer |
-| [exemples](https://github.com/PrismarineJS/mineflayer/tree/master/examples) | quelques exemples réalisables avec mineflayer |
+| [exemples](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples) | quelques exemples réalisables avec mineflayer |
 
 
 ## Pour Aider
@@ -76,7 +76,7 @@ Par exemple `version:"1.16.5"`.
 
 ### Echo Example
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 
 const bot = mineflayer.createBot({
   host: 'localhost', // optionel
@@ -114,17 +114,17 @@ et vous obtiendrez un affichage en *direct* qui ressemble à ceci:
 
 | exemple | description |
 |---|---|
-|[maps](https://github.com/PrismarineJS/mineflayer/tree/master/examples/viewer) | afficher ce que votre robot fait en direct |
+|[maps](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples/viewer) | afficher ce que votre robot fait en direct |
 |[pathfinder](https://github.com/Karang/mineflayer-pathfinder/blob/master/examples/test.js) | Faire votre robot se déplacer la oû vous voulez |
-|[coffre](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chest.js) | Utiliser les coffres, fours, distrubuteurs, tables d'enchantements |
-|[pelteuse](https://github.com/PrismarineJS/mineflayer/blob/master/examples/digger.js) | Aprener comment créer un robot simple capable de creuser |
-|[discord](https://github.com/PrismarineJS/mineflayer/blob/master/examples/discord.js) | connectez un bot discord avec un robot mineflayer |
-|[jumper](https://github.com/PrismarineJS/mineflayer/blob/master/examples/jumper.js) | Un robot simple qui peut bouger, sauter, conduire des véhicules, attaquer des créatures proches |
-|[ansi](https://github.com/PrismarineJS/mineflayer/blob/master/examples/ansi.js) | Afficher le chat du robot avec les couleurs du chat dans votre terminal |
-|[guard](https://github.com/PrismarineJS/mineflayer/blob/master/examples/guard.js) | Faire un robot qui garde une zone definie |
-|[multiple-from-file](https://github.com/PrismarineJS/mineflayer/blob/master/examples/multiple_from_file.js) | fichier texte avec tous vos comptes minecraft |
+|[coffre](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chest.js) | Utiliser les coffres, fours, distrubuteurs, tables d'enchantements |
+|[pelteuse](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/digger.js) | Aprener comment créer un robot simple capable de creuser |
+|[discord](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/discord.js) | connectez un bot discord avec un robot mineflayer |
+|[jumper](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/jumper.js) | Un robot simple qui peut bouger, sauter, conduire des véhicules, attaquer des créatures proches |
+|[ansi](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/ansi.js) | Afficher le chat du robot avec les couleurs du chat dans votre terminal |
+|[guard](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/guard.js) | Faire un robot qui garde une zone definie |
+|[multiple-from-file](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/multiple_from_file.js) | fichier texte avec tous vos comptes minecraft |
 
-Et de nombreux exemples dans le dossier [exemples](https://github.com/PrismarineJS/mineflayer/tree/master/examples)
+Et de nombreux exemples dans le dossier [exemples](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples)
 
 ### Modules
 
@@ -177,16 +177,16 @@ Mineflayer peut être amélioré avec plusieurs plugins; tout le monde peut cré
 
 Les plugins les plus récents et les plus utiles sont :
 
- * [pathfinder](https://github.com/PrismarineJS/mineflayer-pathfinder) - advanced A* pathfinding avec de nombres paramètres configurables
+ * [pathfinder](https://github.com/VGKhiem/mineflayer-khiem-pathfinder) - advanced A* pathfinding avec de nombres paramètres configurables
  * [prismarine-viewer](https://github.com/PrismarineJS/prismarine-viewer) - Un simple inspecteur web de chunk
  * [web-inventory](https://github.com/ImHarvol/mineflayer-web-inventory) - un inspecteur d'inventaire en ligne
- * [statemachine](https://github.com/PrismarineJS/mineflayer-statemachine) - Une API pour state machine pour robots aux comportements complexes
+ * [statemachine](https://github.com/VGKhiem/mineflayer-khiem-statemachine) - Une API pour state machine pour robots aux comportements complexes
  * [Armor Manager](https://github.com/PrismarineJS/MineflayerArmorManager) - gestion d'armure automatique
- * [Collect Block](https://github.com/PrismarineJS/mineflayer-collectblock) - Une API rapide et flexible pour colleter des blocs.
+ * [Collect Block](https://github.com/VGKhiem/mineflayer-khiem-collectblock) - Une API rapide et flexible pour colleter des blocs.
  * [Dashboard](https://github.com/wvffle/mineflayer-dashboard) - intertace en ligne pour robots mineflayer
- * [PVP](https://github.com/PrismarineJS/mineflayer-pvp) - Une API facile pour les combats contre les entités et les joueurs.
+ * [PVP](https://github.com/VGKhiem/mineflayer-khiem-pvp) - Une API facile pour les combats contre les entités et les joueurs.
  * [auto-eat](https://github.com/LINKdiscordd/mineflayer-auto-eat) - pour manger automatiquement de la nouriture.
- * [Tool](https://github.com/PrismarineJS/mineflayer-tool) - Un plugin pour choisir automatiquement le meilleur outil pour une tâche donnée
+ * [Tool](https://github.com/VGKhiem/mineflayer-khiem-tool) - Un plugin pour choisir automatiquement le meilleur outil pour une tâche donnée
  * [Hawkeye](https://github.com/sefirosweb/minecraftHawkEye) - Un plugin pour viser à la perfection avec des arcs.
 
 
@@ -194,7 +194,7 @@ Laissez un coup d'oeil à ses projets :
  
  * [radar](https://github.com/andrewrk/mineflayer-radar/) - interface web utilisant un canvas et une communication socket.io. [YouTube Demo](https://www.youtube.com/watch?v=FjDmAfcVulQ)
  * [blockfinder](https://github.com/Darthfett/mineflayer-blockFinder) - trouver des blocs dans un monde 3D
- * [scaffold](https://github.com/PrismarineJS/mineflayer-scaffold) - trouver le meilleur chemin vers une destination précise en cassant et dispoant des blocs
+ * [scaffold](https://github.com/VGKhiem/mineflayer-khiem-scaffold) - trouver le meilleur chemin vers une destination précise en cassant et dispoant des blocs
    [YouTube Demo](http://youtu.be/jkg6psMUSE0)
  * [auto-auth](https://github.com/G07cha/MineflayerAutoAuth) - remplissage de compte de capchat pour serveur hors-ligne
  * [Bloodhound](https://github.com/Nixes/mineflayer-bloodhound) - determiner ce qui a attaqué une autre entité.
@@ -213,8 +213,8 @@ Laissez un coup d'oeil à ses projets :
  * [Cheese Bot](https://github.com/Minecheesecraft/Cheese-Bot) - Un robot basé sur les plugins, qui a une jolie interface. Réalisée avec Node-Webkit. http://bot.ezcha.net/
  * [Chaoscraft](https://github.com/schematical/chaoscraft) - Des robots minecraft qui utilisent des algorithmes génétiques, regarder [ces videos youtube](https://www.youtube.com/playlist?list=PLLkpLgU9B5xJ7Qy4kOyBJl5J6zsDIMceH)
  * [hexatester/minetelegram](https://github.com/hexatester/minetelegram) -  Minecraft - une API telgram, construite sur Mineflayer et Telegraf.
- * [ProZedd/mineflayer-builder](https://github.com/PrismarineJS/mineflayer-builder) - "Imprimme" un .schematic dans Minecraft
- * [et beaucoup plus](https://github.com/PrismarineJS/mineflayer/network/dependents) - Tous les les projets utilisant Mineflayer
+ * [ProZedd/mineflayer-builder](https://github.com/VGKhiem/mineflayer-khiem-builder) - "Imprimme" un .schematic dans Minecraft
+ * [et beaucoup plus](https://github.com/VGKhiem/mineflayer-khiem/network/dependents) - Tous les les projets utilisant Mineflayer
 
 
 ## Test

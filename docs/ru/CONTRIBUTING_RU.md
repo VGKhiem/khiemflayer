@@ -11,7 +11,7 @@
 * Стадия 2: многообещающая идея, но требует дополнительного обдумывания перед реализацией
 * Стадия 3: идея точно задана, осталось только сделать код
 
-Ссылки по типу https://github.com/PrismarineJS/mineflayer/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 могут использоваться для показа только с меток первой стадии, если вы хотите развить какую-либо тему.
+Ссылки по типу https://github.com/VGKhiem/mineflayer-khiem/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 могут использоваться для показа только с меток первой стадии, если вы хотите развить какую-либо тему.
 
 ## Создание тестов
 Mineflayer имеет 2 вида тестов :
@@ -39,7 +39,7 @@ npm run mocha_test -- -g "mineflayer_external 1.20.4v"
 
 Для внешних тестов вам просто нужно создать файл в [test/externalTests](../../test/externalTests)
 
-Например : [test/externalTests/digAndBuild.js](https://github.com/PrismarineJS/mineflayer/blob/master/test/externalTests/digAndBuild.js)
+Например : [test/externalTests/digAndBuild.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/test/externalTests/digAndBuild.js)
 
 Этот файл должен экспортировать функцию, возвращающую функцию или массив функций, принимающих в качестве параметра объект бота и выполненный обратный вызов,  
 он должен содержать утверждения для проверки, если тестируемая функциональность не сработала.

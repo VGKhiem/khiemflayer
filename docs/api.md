@@ -86,6 +86,7 @@
       - [Particle.movementSpeed](#particlemovementspeed)
   - [Bot](#bot)
     - [mineflayer.createBot(options)](#mineflayercreatebotoptions)
+    - [mineflayer.createBotAsync(options)](#mineflayercreatebotasyncoptions)
     - [Properties](#properties)
       - [bot.registry](#botregistry)
       - [bot.world](#botworld)
@@ -792,9 +793,13 @@ Particle speed in a random direction
 
 ## Bot
 
+### mineflayer.createBotAsync(options)
+
+Create and return a Promise that resolves to an instance of the class bot. This function is required if you are using `viaProxy` or `forceViaProxy`, because starting the proxy process is asynchronous.
+
 ### mineflayer.createBot(options)
 
-Create and return an instance of the class bot.
+Create and return an instance of the class bot. (Note: Will throw an error if `viaProxy` is set to true).
 `options` is an object containing the optional properties :
  * username : default to 'Player'
  * port : default to 25565
@@ -827,6 +832,8 @@ Create and return an instance of the class bot.
  * [enableServerListing](#bot.settings.enableServerListing)
  * chatLengthLimit : the maximum amount of characters that can be sent in a single message. If this is not set, it will be 100 in < 1.11 and 256 in >= 1.11.
  * defaultChatPatterns: defaults to true, set to false to not add the patterns such as chat and whisper
+ * viaProxy: if true, automatically downloads and launches ViaProxy to support natively unsupported versions (including Bedrock editions).
+ * forceViaProxy: if true, forces ViaProxy usage even if the requested version is natively supported.
 
 ### Properties
 
@@ -1714,7 +1721,7 @@ the event will be called `"chat:name"`, with name being the name passed
 
 returns a number which can be used with bot.removeChatPattern() to only delete this pattern
 
-- :eyes: cf. [examples/chat_parsing](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chat_parsing.js#L17-L36)
+- :eyes: cf. [examples/chat_parsing](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js#L17-L36)
 
 #### bot.addChatPatternSet(name, patterns, chatPatternOptions)
 
@@ -1728,7 +1735,7 @@ the event will be called `"chat:name"`, with name being the name passed
 
 returns a number which can be used with bot.removeChatPattern() to only delete this patternset
 
-- :eyes: cf. [examples/chat_parsing](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chat_parsing.js#L17-L36)
+- :eyes: cf. [examples/chat_parsing](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js#L17-L36)
 
 #### bot.removeChatPattern(name)
 
@@ -2126,7 +2133,7 @@ All options attributes are false by default, except mode which is 2 (as to repli
 
 This can be used to check is a specific feature is available in the current Minecraft version. This is usually only required for handling version-specific functionality.
 
-The list of available features can be found inside the [./lib/features.json](https://github.com/PrismarineJS/mineflayer/blob/master/lib/features.json) file.
+The list of available features can be found inside the [./lib/features.json](https://github.com/VGKhiem/mineflayer-khiem/blob/master/lib/features.json) file.
 
 #### bot.waitForTicks(ticks)
 

@@ -280,12 +280,12 @@ The last thing you need to know is how to use the [Node Package Manager](https:/
 NPM is automatically installed when you install Node.  
 NPM is used to get useful packages that other people created that can do useful things for you.  
 You can search for packages on [their website](https://www.npmjs.com/), and then install them using the `npm install` command in your terminal.  
-To install Mineflayer for example, run `npm install mineflayer`  
+To install Mineflayer for example, run `npm install mineflayer-khiem`  
 
 Then, Node can access installed modules by using the `require()` function.
 
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 ```
 
 After this, the `mineflayer` variable can be used to access all the features of Mineflayer.
@@ -298,7 +298,7 @@ If you don't know any of the terms above, you should go back to the [previous se
 下面是创建Mineflayer机器人所需的绝对最少代码
 
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 
 const bot = mineflayer.createBot()
 ```
@@ -309,7 +309,7 @@ If you want to choose which server you want your bot to connect to, you have to 
 
 
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 
 const options = {
   host: 'localhost', // 将此项更改为所需的ip
@@ -698,7 +698,7 @@ cd my_scripts
 安装 `mineflayer`:
 
 ```bash
-npm install mineflayer
+npm install mineflayer-khiem
 ```
 
 现在，您可以将所有脚本复制/存储到内部存储器中的`my_scripts`文件夹中。

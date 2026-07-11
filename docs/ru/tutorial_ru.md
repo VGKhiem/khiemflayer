@@ -281,12 +281,12 @@ for (const item of array) {
 NPM автоматически устанавливается, когда вы устанавливаете Node.  
 NPM используется для получения библиотек, которые другие люди создали для удобства.  
 Вы можете посмотреть библиотеки на [сайте](https://www.npmjs.com/) и затем установить их, используя команду `npm install` в вашем терминале.  
-Например, чтобы скачать библиотеку Mineflayer, вам нужно прописать `npm install mineflayer`  
+Например, чтобы скачать библиотеку Mineflayer, вам нужно прописать `npm install mineflayer-khiem`  
 
 Теперь Node может получить доступ к установленной библиотеке с помощью функции `require()`.
 
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 ```
 
 После этого будет доступна переменная `mineflayer`, представляющая все функции Mineflayer.
@@ -299,7 +299,7 @@ const mineflayer = require('mineflayer')
 Снизу представлены начальные действия для создания бота.
 
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 
 const bot = mineflayer.createBot()
 ```
@@ -310,7 +310,7 @@ const bot = mineflayer.createBot()
 
 
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 
 const options = {
   host: 'localhost', // Измените это на айпи сервера, который вам нужен.
@@ -484,7 +484,7 @@ async function craft (bot) {
 К тому времени как код уже выполняет второй `bot.craft()`, первый ещё возможно даже не закончился, а значит ресурсов для палок ещё нет.  
 Использование промисов может исправить это, потому что будет известно, когда закончится выполнение `bot.craft()`.
 
-Больше о методе `bot.craft()` [здесь](https://github.com/PrismarineJS/mineflayer/blob/master/docs/api_ru.md#botcraftrecipe-count-craftingtable).
+Больше о методе `bot.craft()` [здесь](https://github.com/VGKhiem/mineflayer-khiem/blob/master/docs/api_ru.md#botcraftrecipe-count-craftingtable).
 
 ## Продвинутым
 
@@ -648,7 +648,7 @@ cd my_scripts
 Установите `mineflayer`:
 
 ```bash
-npm install mineflayer
+npm install mineflayer-khiem
 ```
 
 Теперь вы можете скопировать и хранить все свои скрипты в папке `my_scripts` во внутреннем хранилище.

@@ -336,7 +336,7 @@ For anyone wanting to contribute to 1.21.5 support:
 ## References
 
 - [PrismarineJS/prismarine-chunk#289](https://github.com/PrismarineJS/prismarine-chunk/pull/289)
-- [PrismarineJS/mineflayer#3691](https://github.com/PrismarineJS/mineflayer/pull/3691)
-- [PrismarineJS/mineflayer#3641](https://github.com/PrismarineJS/mineflayer/issues/3641)
+- [VGKhiem/mineflayer-khiem#3691](https://github.com/VGKhiem/mineflayer-khiem/pull/3691)
+- [VGKhiem/mineflayer-khiem#3641](https://github.com/VGKhiem/mineflayer-khiem/issues/3641)
 - [PrismarineJS/minecraft-data#1029](https://github.com/PrismarineJS/minecraft-data/pull/1029)
 - [PrismarineJS/node-minecraft-protocol#1408](https://github.com/PrismarineJS/node-minecraft-protocol/pull/1408) 

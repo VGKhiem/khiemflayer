@@ -1,13 +1,13 @@
 # Mineflayer
 
 [![NPM version](https://badge.fury.io/js/mineflayer.svg)](http://badge.fury.io/js/mineflayer)
-[![Build Status](https://github.com/PrismarineJS/mineflayer/workflows/CI/badge.svg)](https://github.com/PrismarineJS/mineflayer/actions?query=workflow%3A%22CI%22)
+[![Build Status](https://github.com/VGKhiem/mineflayer-khiem/workflows/CI/badge.svg)](https://github.com/VGKhiem/mineflayer-khiem/actions?query=workflow%3A%22CI%22)
 [![Discord](https://img.shields.io/badge/chat-on%20discord-brightgreen.svg)](https://discord.gg/GsEFRM8)
 [![Gitter](https://img.shields.io/badge/chat-on%20gitter-brightgreen.svg)](https://gitter.im/PrismarineJS/general)
 [![Irc](https://img.shields.io/badge/chat-on%20irc-brightgreen.svg)](https://irc.gitter.im/)
-[![Issue Hunt](https://github.com/BoostIO/issuehunt-materials/blob/master/v1/issuehunt-shield-v1.svg)](https://issuehunt.io/r/PrismarineJS/mineflayer)
+[![Issue Hunt](https://github.com/BoostIO/issuehunt-materials/blob/master/v1/issuehunt-shield-v1.svg)](https://issuehunt.io/r/VGKhiem/mineflayer-khiem)
 
-[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/PrismarineJS/mineflayer)
+[![Try it on gitpod](https://img.shields.io/badge/try-on%20gitpod-brightgreen.svg)](https://gitpod.io/#https://github.com/VGKhiem/mineflayer-khiem)
 
 | <sub>EN</sub> [English](../README.md) | <sub>RU</sub> [русский](../ru/README_RU.md) | <sub>ES</sub> [Español](../es/README_ES.md) | <sub>FR</sub> [Français](../fr/README_FR.md) | <sub>TR</sub> [Türkçe](../tr/README_TR.md) | <sub>ZH</sub> [中文](../zh/README_ZH_CN.md) | <sub>BR</sub> [Portuguese](../br/README_BR.md) |
 |-------------------------|----------------------------|----------------------------|----------------------------|----------------------------|----------------------------|----------------------------|
@@ -32,11 +32,11 @@ JavaScript ile güçlü, stabil ve üst seviye Minecraft botları oluşturabilec
 
 ### Yol Haritası
 
-Bu sayfayı ziyaret ederek [projelerin](https://github.com/PrismarineJS/mineflayer/wiki/Big-Prismarine-projects) durumlarını öğrenebilirsin. 
+Bu sayfayı ziyaret ederek [projelerin](https://github.com/VGKhiem/mineflayer-khiem/wiki/Big-Prismarine-projects) durumlarını öğrenebilirsin. 
  
 ## Kurulum
 
-Node.js 14 veya üstü bir sürümü [nodejs.org](https://nodejs.org/) adresinden indirip kurduktan sonra mineflayer'ı  `npm install mineflayer` ile kurabilirsin.
+Node.js 14 veya üstü bir sürümü [nodejs.org](https://nodejs.org/) adresinden indirip kurduktan sonra mineflayer'ı  `npm install mineflayer-khiem` ile kurabilirsin.
 
 ## Belgeler / Wiki
 
@@ -46,7 +46,7 @@ Node.js 14 veya üstü bir sürümü [nodejs.org](https://nodejs.org/) adresinde
 | [FAQ.md](FAQ.md) | Aklına bir şey mi takıldı? Buraya bak. |
 | [api.md](api.md) [unstable_api.md](unstable_api.md) | API hakkında her şey |
 | [history.md](history.md) | Değişikliklerin listesi |
-| [examples/](https://github.com/PrismarineJS/mineflayer/tree/master/examples) | Tüm mineflayer örnekleri |
+| [examples/](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples) | Tüm mineflayer örnekleri |
 
 
 ## Katkıda bulun
@@ -72,7 +72,7 @@ Eğer sürüm belirtilmezse otomatik olarak ayarlanacaktır. Kimlik doğrulama t
 
 ### Papağan Örneği (bot dediklerinizi taklit eder)
 ```js
-const mineflayer = require('mineflayer')
+const mineflayer = require('mineflayer-khiem')
 
 const bot = mineflayer.createBot({
   host: 'localhost', // sunucu IP adresi
@@ -110,17 +110,17 @@ ve şuna benzeyen *canlı* bir görüntü elde edeceksin:
 
 | Örnek | Açıklama |
 |---|---|
-|[viewer](https://github.com/PrismarineJS/mineflayer/tree/master/examples/viewer) | Botunu tarayıcında izle |
-|[pathfinder](https://github.com/PrismarineJS/mineflayer/tree/master/examples/pathfinder) | Botunun belirli bir yere gitmesini sağla |
-|[chest](https://github.com/PrismarineJS/mineflayer/blob/master/examples/chest.js) | Sandıkları, fırınları, fırlatıcıları ve büyü masalarını kullan |
-|[digger](https://github.com/PrismarineJS/mineflayer/blob/master/examples/digger.js) | Blok kazabilen bir botun nasıl yapılacağını öğren |
-|[discord](https://github.com/PrismarineJS/mineflayer/blob/master/examples/discord.js) | Discord ile bir mineflayer botunu bağla |
-|[jumper](https://github.com/PrismarineJS/mineflayer/blob/master/examples/jumper.js) | Nasıl hareket edebileceğini, zıplayabileceğini, taşıt kullanabileceğini, yakındaki canlılara saldırabileceğini öğren |
-|[ansi](https://github.com/PrismarineJS/mineflayer/blob/master/examples/ansi.js) | Sohbet mesajlarını bütün renkleri görecek şekilde konsoldan izle |
-|[guard](https://github.com/PrismarineJS/mineflayer/blob/master/examples/guard.js) | Çevreyi etraftaki yaratıklardan koruyan bir bot yap |
-|[multiple-from-file](https://github.com/PrismarineJS/mineflayer/blob/master/examples/multiple_from_file.js) | Birçok hesabın bulunduğu bir dosya kullanarak o hesaplarla botlar yap |
+|[viewer](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples/viewer) | Botunu tarayıcında izle |
+|[pathfinder](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples/pathfinder) | Botunun belirli bir yere gitmesini sağla |
+|[chest](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chest.js) | Sandıkları, fırınları, fırlatıcıları ve büyü masalarını kullan |
+|[digger](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/digger.js) | Blok kazabilen bir botun nasıl yapılacağını öğren |
+|[discord](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/discord.js) | Discord ile bir mineflayer botunu bağla |
+|[jumper](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/jumper.js) | Nasıl hareket edebileceğini, zıplayabileceğini, taşıt kullanabileceğini, yakındaki canlılara saldırabileceğini öğren |
+|[ansi](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/ansi.js) | Sohbet mesajlarını bütün renkleri görecek şekilde konsoldan izle |
+|[guard](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/guard.js) | Çevreyi etraftaki yaratıklardan koruyan bir bot yap |
+|[multiple-from-file](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/multiple_from_file.js) | Birçok hesabın bulunduğu bir dosya kullanarak o hesaplarla botlar yap |
 
-daha da fazlası [burada](https://github.com/PrismarineJS/mineflayer/tree/master/examples)
+daha da fazlası [burada](https://github.com/VGKhiem/mineflayer-khiem/tree/master/examples)
 
 ### Modüller
 
@@ -210,8 +210,8 @@ En çok güncellenen ve en kullanışlı olan bazıları:
  * [Cheese Bot](https://github.com/Minecheesecraft/Cheese-Bot) - node-webkit ile yapılan eklenti bazlı, temiz bir arayüze sahip bir bot
  * [Chaoscraft](https://github.com/schematical/chaoscraft) - genetik algoritmalar kullanan bir Minecraft botu, [videoları burada](https://www.youtube.com/playlist?list=PLLkpLgU9B5xJ7Qy4kOyBJl5J6zsDIMceH)
  * [hexatester/minetelegram](https://github.com/hexatester/minetelegram) -  mineflayer & telegraf üstüne kurulu Minecraft - Telegram köprüsü
- * [PrismarineJS/mineflayer-builder](https://github.com/PrismarineJS/mineflayer-builder) - Minecraft şemalarını hayatta kalma modunda inşa eden bir proje
- * [ve daha niceleri](https://github.com/PrismarineJS/mineflayer/network/dependents) - mineflayer kullanıyor olup GitHub tarafından tespit edilen tüm projeler.
+ * [VGKhiem/mineflayer-khiem-builder](https://github.com/VGKhiem/mineflayer-khiem-builder) - Minecraft şemalarını hayatta kalma modunda inşa eden bir proje
+ * [ve daha niceleri](https://github.com/VGKhiem/mineflayer-khiem/network/dependents) - mineflayer kullanıyor olup GitHub tarafından tespit edilen tüm projeler.
 
 
 ## Test etme

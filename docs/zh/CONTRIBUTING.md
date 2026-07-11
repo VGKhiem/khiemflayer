@@ -12,7 +12,7 @@ Mineflayer 最初主要是由 [andrewrk](http://github.com/andrewrk) 制作的
 * Stage 2: 有希望的想法，但在实施前需要更多思考
 * Stage 3: 想法被精确地指定了，就剩写代码了
 
-链接如 https://github.com/PrismarineJS/mineflayer/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 can be used to filter out stage 1 if you're looking for things that are ready for contribution
+链接如 https://github.com/VGKhiem/mineflayer-khiem/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 can be used to filter out stage 1 if you're looking for things that are ready for contribution
 
 ## 创建测试
 Mineflayer 有两种测试 :
@@ -26,7 +26,7 @@ The objective of these tests is to know automatically what works and what doesn'
 
 In order to add an external test now you only need to create a file in [test/externalTests](test/externalTests)
 
-一个例子 : [test/externalTests/digAndBuild.js](https://github.com/PrismarineJS/mineflayer/blob/master/test/externalTests/digAndBuild.js)
+一个例子 : [test/externalTests/digAndBuild.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/test/externalTests/digAndBuild.js)
 
 That file needs to export a function returning a function or an array of function taking as parameter the bot object and a done callback,
  it should contain asserts to test if the tested functionality failed.
