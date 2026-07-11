@@ -25,7 +25,7 @@ client.on('end', () => {})
 ### I'm not getting chat event on a custom server, how can I solve it ?
 
 Spigot servers, in particular some plugins, use custom chat formats, you need to parse it with a custom regex / parser.
-Read and adapt [chat_parsing.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js) to make it work for your particular
+Read and adapt [chat_parsing.js](https://github.com/VGKhiem/khiemflayer/blob/master/examples/chat_parsing.js) to make it work for your particular
 chat plugin. Also read http://prismarinejs.github.io/mineflayer/#/tutorial?id=custom-chat
 
 ### How can I collect info from an custom plugin in chat ?
@@ -84,11 +84,11 @@ bot.inventory.items() returns an array of the bot's items. You can use a recursi
 
 ### How do I check packets that are sent/received ?
 
-Enabled debug mode https://github.com/VGKhiem/mineflayer-khiem#debug
+Enabled debug mode https://github.com/VGKhiem/khiemflayer#debug
 
 ### I want to avoid disconnection even in case of server lag, how can I achieve this ?
 
-One way is to increase the [checkTimeoutInterval](https://github.com/PrismarineJS/node-minecraft-protocol/blob/master/docs/API.md#mccreateclientoptions) option (to set in createBot) to an higher value (for example `300*1000` which is 5min instead of the default 30s). If you still get disconnected, you can auto reconnect using something like this example https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/reconnector.js
+One way is to increase the [checkTimeoutInterval](https://github.com/PrismarineJS/node-minecraft-protocol/blob/master/docs/API.md#mccreateclientoptions) option (to set in createBot) to an higher value (for example `300*1000` which is 5min instead of the default 30s). If you still get disconnected, you can auto reconnect using something like this example https://github.com/VGKhiem/khiemflayer/blob/master/examples/reconnector.js
 
 ### How to get the lore / text of an item ?
 
@@ -120,7 +120,7 @@ function getLore (item) {
 
 ### How can I send message from the console to the server?
 
-You can use a library like `repl` to read the console input and use `bot.chat()` to send it. You can find an example [here.](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/repl.js)
+You can use a library like `repl` to read the console input and use `bot.chat()` to send it. You can find an example [here.](https://github.com/VGKhiem/khiemflayer/blob/master/examples/repl.js)
 
 ### When creating a plugin, how can I specify another plugin as a dependency?
 

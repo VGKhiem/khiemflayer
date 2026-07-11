@@ -12,7 +12,7 @@ We have 3 stage labels to try to organize issues:
 * Stage 2: promising idea, but needs more thinking before implementation
 * Stage 3: idea is precisely specified, only coding is left to do
 
-Links like https://github.com/VGKhiem/mineflayer-khiem/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 can be used to filter out stage 1 if you're looking for things that are ready for contribution
+Links like https://github.com/VGKhiem/khiemflayer/issues?q=is%3Aopen+is%3Aissue+-label%3AStage1 can be used to filter out stage 1 if you're looking for things that are ready for contribution
 
 ## Creating tests
 Mineflayer has two kind of tests :
@@ -42,7 +42,7 @@ npm run mocha_test -- -g "mineflayer_external 1.20.4v"
 
 In order to add an external test now you only need to create a file in [test/externalTests](test/externalTests)
 
-An example : [test/externalTests/digAndBuild.js](https://github.com/VGKhiem/mineflayer-khiem/blob/master/test/externalTests/digAndBuild.js)
+An example : [test/externalTests/digAndBuild.js](https://github.com/VGKhiem/khiemflayer/blob/master/test/externalTests/digAndBuild.js)
 
 That file needs to export a function returning a function or an array of function taking as parameter the bot object and a done callback,
  it should contain asserts to test if the tested functionality failed.

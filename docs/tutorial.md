@@ -280,12 +280,12 @@ The last thing you need to know is how to use the [Node Package Manager](https:/
 NPM is automatically installed when you install Node.  
 NPM is used to get useful packages that other people created that can do useful things for you.  
 You can search for packages on [their website](https://www.npmjs.com/), and then install them using the `npm install` command in your terminal.  
-To install Mineflayer for example, run `npm install mineflayer-khiem`  
+To install Mineflayer for example, run `npm install khiemflayer`  
 
 Then, Node can access installed modules by using the `require()` function.
 
 ```js
-const mineflayer = require('mineflayer-khiem')
+const mineflayer = require('khiemflayer')
 ```
 
 After this, the `mineflayer` variable can be used to access all the features of Mineflayer.
@@ -298,7 +298,7 @@ If you don't know any of the terms above, you should go back to the [previous se
 Below is the absolute minimum necessary to create a Mineflayer bot.
 
 ```js
-const mineflayer = require('mineflayer-khiem')
+const mineflayer = require('khiemflayer')
 
 const bot = mineflayer.createBot()
 ```
@@ -309,7 +309,7 @@ If you want to choose which server you want your bot to connect to, you have to 
 
 
 ```js
-const mineflayer = require('mineflayer-khiem')
+const mineflayer = require('khiemflayer')
 
 const options = {
   host: 'localhost', // Change this to the ip you want.
@@ -483,7 +483,7 @@ The reason the incorrect approach is wrong is because when `bot.craft()` is call
 By the time the code reaches the second `bot.craft()`, the first probably hasn't finished yet, which means the wanted resource is not available yet.  
 Using promises can fix this because they will only be called after the `bot.craft()` is finished.
 
-More on the [bot.craft()](https://github.com/VGKhiem/mineflayer-khiem/blob/master/docs/api.md#botcraftrecipe-count-craftingtable) method.
+More on the [bot.craft()](https://github.com/VGKhiem/khiemflayer/blob/master/docs/api.md#botcraftrecipe-count-craftingtable) method.
 
 ## Advanced
 
@@ -647,7 +647,7 @@ cd my_scripts
 Install `mineflayer`:
 
 ```bash
-npm install mineflayer-khiem
+npm install khiemflayer
 ```
 
 Now you can copy / store all of your scripts into `my_scripts` folder inside Internal Storage.

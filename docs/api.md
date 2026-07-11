@@ -1718,7 +1718,7 @@ the event will be called `"chat:name"`, with name being the name passed
 
 returns a number which can be used with bot.removeChatPattern() to only delete this pattern
 
-- :eyes: cf. [examples/chat_parsing](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js#L17-L36)
+- :eyes: cf. [examples/chat_parsing](https://github.com/VGKhiem/khiemflayer/blob/master/examples/chat_parsing.js#L17-L36)
 
 #### bot.addChatPatternSet(name, patterns, chatPatternOptions)
 
@@ -1732,7 +1732,7 @@ the event will be called `"chat:name"`, with name being the name passed
 
 returns a number which can be used with bot.removeChatPattern() to only delete this patternset
 
-- :eyes: cf. [examples/chat_parsing](https://github.com/VGKhiem/mineflayer-khiem/blob/master/examples/chat_parsing.js#L17-L36)
+- :eyes: cf. [examples/chat_parsing](https://github.com/VGKhiem/khiemflayer/blob/master/examples/chat_parsing.js#L17-L36)
 
 #### bot.removeChatPattern(name)
 
@@ -2130,7 +2130,7 @@ All options attributes are false by default, except mode which is 2 (as to repli
 
 This can be used to check is a specific feature is available in the current Minecraft version. This is usually only required for handling version-specific functionality.
 
-The list of available features can be found inside the [./lib/features.json](https://github.com/VGKhiem/mineflayer-khiem/blob/master/lib/features.json) file.
+The list of available features can be found inside the [./lib/features.json](https://github.com/VGKhiem/khiemflayer/blob/master/lib/features.json) file.
 
 #### bot.waitForTicks(ticks)
 
