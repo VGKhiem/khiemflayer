@@ -10,7 +10,7 @@ First time using Node.js? You may want to start with the [tutorial](tutorial.md)
 
 ## Features
 
- * Natively supports Minecraft 1.8 to 1.21.11, and **virtually any Minecraft version (including Bedrock Edition)** by setting `viaProxy: true` in `createBotAsync()`. <!--version-->
+ * Natively supports Minecraft 1.8 to 1.21.11, and **virtually any Minecraft version (including Bedrock Edition)** by setting `viaProxy: true` in `createBot()`. <!--version-->
  * Entity knowledge and tracking.
  * Block knowledge. You can query the world around you. Milliseconds to find any block.
  * Physics and movement - handle all bounding boxes
