@@ -22,9 +22,9 @@
   "license": "MIT",
   "dependencies": {
     "khiemflayer-minecraft-data": "^3.111.0",
-    "khiemflayer-minecraft-protocol": "\^1.66.4",
+    "khiemflayer-minecraft-protocol": "^1.66.4",
     "minecraft-data": "npm:khiemflayer-minecraft-data@^3.111.0",
-    "minecraft-protocol": "npm:khiemflayer-minecraft-protocol@^1.66.3",
+    "minecraft-protocol": "npm:khiemflayer-minecraft-protocol@^1.66.4",
     "mojangson": "^2.0.4",
     "prismarine-biome": "^1.1.1",
     "prismarine-block": "^1.22.0",
