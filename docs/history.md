@@ -26,7 +26,7 @@
 * [Bump @types/node to 25.2.1 + fix flaky time & nether tests (#3828)](https://github.com/VGKhiem/khiemflayer/commit/89686596c8de1091bf45104ba3230a5e87707a20) (thanks @plainprince)
 
 ## 4.35.0
-* [🎈 1.21.11 (#3781)](https://github.com/VGKhiem/khiemflayer/commit/597745c7c061943620fcacba7254bccee05b7a3e) (thanks @rom1504bot)
+* [🎈 26.2 (#3781)](https://github.com/VGKhiem/khiemflayer/commit/597745c7c061943620fcacba7254bccee05b7a3e) (thanks @rom1504bot)
 * [Fix chat pattern and event listener in tutorial (#3783)](https://github.com/VGKhiem/khiemflayer/commit/48586138f560991de60bea639c71fa82954cf50f) (thanks @brentspine)
 * [Update history.md](https://github.com/VGKhiem/khiemflayer/commit/c9f766513d5bb5a93c5b86c07827128716c0afdb) (thanks @extremeheat)
 
