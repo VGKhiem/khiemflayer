@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/VGKhiem/khiemflayer/ci.yml.svg?label=CI&logo=github&logoColor=lightgrey)](https://github.com/VGKhiem/khiemflayer/actions?query=workflow%3A%22CI%22)
 
 Create Minecraft bots with a powerful, stable, and high level JavaScript [API](api.md), also usable from Python.
-(A custom fork with Native [ViaProxy](https://github.com/lyfegame/mineflayer-viaproxy) Integration).
+(A custom fork with Native [ViaProxy](https://github.com/VGKhiem/khiemflayer-viaproxy) Integration).
 
 First time using Node.js? You may want to start with the [tutorial](tutorial.md).
 
@@ -113,7 +113,7 @@ const client = mineflayer.createBot({
 })
 ```
 
-#### Connecting with [ViaProxy](https://github.com/lyfegame/mineflayer-viaproxy)
+#### Connecting with [ViaProxy](https://github.com/VGKhiem/khiemflayer-viaproxy)
 
 To join a server on a version not natively supported by your `khiemflayer` instance, or even a Bedrock server, you can pass `viaProxy: true` to `createBot` which spins up a proxy automatically. Note that doing this makes `createBot` return a Promise instead of a Bot instance directly!
 
