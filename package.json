@@ -1,6 +1,6 @@
 {
   "name": "khiemflayer",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "create minecraft bots with a stable, high level API",
   "main": "index.js",
   "types": "index.d.ts",
@@ -22,9 +22,9 @@
   "license": "MIT",
   "dependencies": {
     "khiemflayer-minecraft-data": "^3.111.0",
-    "khiemflayer-minecraft-protocol": "^1.66.4",
+    "khiemflayer-minecraft-protocol": "^1.66.5",
     "minecraft-data": "npm:khiemflayer-minecraft-data@^3.111.0",
-    "minecraft-protocol": "npm:khiemflayer-minecraft-protocol@^1.66.4",
+    "minecraft-protocol": "npm:khiemflayer-minecraft-protocol@^1.66.5",
     "mojangson": "^2.0.4",
     "prismarine-biome": "^1.1.1",
     "prismarine-block": "^1.22.0",
@@ -38,7 +38,7 @@
     "prismarine-registry": "^1.10.0",
     "prismarine-windows": "^2.9.0",
     "prismarine-world": "^3.6.0",
-    "protodef": "github:extremeheat/node-protodef#dlog",
+    "protodef": "^1.19.0",
     "typed-emitter": "^1.0.0",
     "uuid-1345": "^1.0.2",
     "vec3": "^0.1.7"
