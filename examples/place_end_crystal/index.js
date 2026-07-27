@@ -6,7 +6,7 @@
 const mineflayer = require('mineflayer')
 const pathfinder = require('mineflayer-pathfinder')
 const { Vec3 } = require('vec3')
-const AABB = require('prismarine-physics/lib/aabb')
+const AABB = require('khiemflayer-minecraft-physics/lib/aabb')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
   console.log('Usage : node ansi.js <host> <port> [<name>] [<password>]')
@@ -51,7 +51,7 @@ bot.on('chat', async (ign, msg) => {
       const { x: aboveX, y: aboveY, z: aboveZ } = block.position.offset(0, 1, 0)
       const blockBoundingBox = new AABB(aboveX, aboveY, aboveZ, aboveX + 1, aboveY + 2, aboveZ + 1)
       const entityAABBs = Object.values(bot.entities).map(entity => {
-        // taken from https://github.com/PrismarineJS/prismarine-physics/blob/d145e54a4bb8604300258badd7563f59f2101922/index.js#L92
+        // taken from https://github.com/PrismarineJS/khiemflayer-minecraft-physics/blob/d145e54a4bb8604300258badd7563f59f2101922/index.js#L92
         const w = entity.height / 2
         const { x, y, z } = entity.position
         return new AABB(-w, 0, -w, w, entity.height, w).offset(x, y, z)
@@ -71,3 +71,4 @@ bot.on('chat', async (ign, msg) => {
   await bot.placeEntity(block, new Vec3(0, 1, 0))
   bot.chat('I placed an end crystal!')
 })
+
