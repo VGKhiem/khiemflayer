@@ -1,6 +1,6 @@
 {
   "name": "khiemflayer",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "create minecraft bots with a stable, high level API",
   "main": "index.js",
   "types": "index.d.ts",
@@ -22,9 +22,9 @@
   "license": "MIT",
   "dependencies": {
     "khiemflayer-minecraft-data": "^3.111.0",
-    "khiemflayer-minecraft-protocol": "^1.66.5",
+    "khiemflayer-minecraft-protocol": "^1.66.6",
     "minecraft-data": "npm:khiemflayer-minecraft-data@^3.111.0",
-    "minecraft-protocol": "npm:khiemflayer-minecraft-protocol@^1.66.5",
+    "minecraft-protocol": "npm:khiemflayer-minecraft-protocol@^1.66.6",
     "mojangson": "^2.0.4",
     "prismarine-biome": "^1.1.1",
     "prismarine-block": "^1.22.0",
