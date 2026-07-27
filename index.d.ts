@@ -1,15 +1,15 @@
 import { EventEmitter } from 'events'
 import TypedEmitter from 'typed-emitter'
 import { Client, ClientOptions } from 'minecraft-protocol'
-import { Vec3 } from 'vec3'
-import { Item } from 'prismarine-item'
-import { Window } from 'prismarine-windows'
-import { Recipe } from 'prismarine-recipe'
-import { Block } from 'prismarine-block'
-import { Entity } from 'prismarine-entity'
-import { ChatMessage } from 'prismarine-chat'
-import { world } from 'prismarine-world'
-import { Registry } from 'prismarine-registry'
+import { Vec3 } from 'khiemflayer-minecraft-vec3'
+import { Item } from 'khiemflayer-minecraft-item'
+import { Window } from 'khiemflayer-minecraft-windows'
+import { Recipe } from 'khiemflayer-minecraft-recipe'
+import { Block } from 'khiemflayer-minecraft-block'
+import { Entity } from 'khiemflayer-minecraft-entity'
+import { ChatMessage } from 'khiemflayer-minecraft-chat'
+import { world } from 'khiemflayer-minecraft-world'
+import { Registry } from 'khiemflayer-minecraft-registry'
 import { IndexedData } from 'minecraft-data'
 
 export function createBot (options: { client: Client, viaProxy?: false, forceViaProxy?: false } & Partial<BotOptions>): Bot
@@ -899,3 +899,4 @@ export let latestSupportedVersion: string
 export let oldestSupportedVersion: string
 
 export function supportFeature (feature: string, version: string): boolean
+

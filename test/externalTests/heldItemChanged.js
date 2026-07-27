@@ -11,7 +11,7 @@ module.exports = () => async (bot) => {
   const diamondId = bot.registry.itemsByName.diamond.id
 
   // Put stone in the current held slot
-  await bot.test.setInventorySlot(bot.quickBarSlot + bot.inventory.hotbarStart, new (require('prismarine-item')(bot.registry))(stoneId, 1))
+  await bot.test.setInventorySlot(bot.quickBarSlot + bot.inventory.hotbarStart, new (require('khiemflayer-minecraft-item')(bot.registry))(stoneId, 1))
   await bot.test.wait(100)
   assert.strictEqual(bot.heldItem.type, stoneId, 'should be holding stone')
 
@@ -19,10 +19,11 @@ module.exports = () => async (bot) => {
   const heldItemPromise = onceWithCleanup(bot, 'heldItemChanged', {
     timeout: 5000
   })
-  await bot.test.setInventorySlot(bot.quickBarSlot + bot.inventory.hotbarStart, new (require('prismarine-item')(bot.registry))(diamondId, 1))
+  await bot.test.setInventorySlot(bot.quickBarSlot + bot.inventory.hotbarStart, new (require('khiemflayer-minecraft-item')(bot.registry))(diamondId, 1))
 
   const [newItem] = await heldItemPromise
   assert(newItem, 'heldItemChanged should fire with the new item')
   assert.strictEqual(newItem.type, diamondId, 'new item should be diamond')
   assert.strictEqual(bot.heldItem.type, diamondId, 'bot.heldItem should reflect diamond')
 }
+

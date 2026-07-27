@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 module.exports = () => async (bot) => {
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   const furnacePos = bot.entity.position.offset(2, 0, 0).floored()
   const coalId = bot.registry.itemsByName.coal.id
@@ -74,3 +74,4 @@ module.exports = () => async (bot) => {
   assert.strictEqual(porkchopCount, porkchopInputCount - 1)
   assert.strictEqual(coalCount, coalInputCount - 1)
 }
+

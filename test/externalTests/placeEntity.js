@@ -1,5 +1,5 @@
 const assert = require('assert')
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const { once } = require('../../lib/promise_utils')
 
 module.exports = (version) => {
@@ -99,3 +99,4 @@ module.exports = (version) => {
 
   return tests
 }
+

@@ -1,4 +1,4 @@
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 
 const { spawn } = require('child_process')
 const { once } = require('../../../lib/promise_utils')
@@ -262,3 +262,4 @@ function inject (bot, wrap) {
     }
   }
 }
+

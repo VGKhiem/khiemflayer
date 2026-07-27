@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 const mineflayer = require('../')
-const vec3 = require('vec3')
+const vec3 = require('khiemflayer-minecraft-vec3')
 const mc = require('khiemflayer-minecraft-protocol')
 const assert = require('assert')
 const { sleep } = require('../lib/promise_utils')
@@ -10,7 +10,7 @@ const { once } = require('../lib/promise_utils')
 const { getPort } = require('./common/util')
 
 for (const supportedVersion of mineflayer.testedVersions) {
-  const registry = require('prismarine-registry')(supportedVersion)
+  const registry = require('khiemflayer-minecraft-registry')(supportedVersion)
   const version = registry.version
   const Chunk = require('prismarine-chunk')(supportedVersion)
 
@@ -1180,7 +1180,7 @@ for (const supportedVersion of mineflayer.testedVersions) {
 
     describe('heldItemChanged', () => {
       it('emits heldItemChanged when the held slot is updated via set_slot', (done) => {
-        const Item = require('prismarine-item')(supportedVersion)
+        const Item = require('khiemflayer-minecraft-item')(supportedVersion)
         const QUICK_BAR_SLOT = 0
         const HOTBAR_START = 36
         const stoneId = registry.itemsByName.stone.id
@@ -1209,7 +1209,7 @@ for (const supportedVersion of mineflayer.testedVersions) {
       })
 
       it('emits heldItemChanged via updateSlot on the inventory', (done) => {
-        const Item = require('prismarine-item')(supportedVersion)
+        const Item = require('khiemflayer-minecraft-item')(supportedVersion)
         const QUICK_BAR_SLOT = 0
         const stoneId = registry.itemsByName.stone.id
         const stoneItem = new Item(stoneId, 1)
@@ -1314,3 +1314,4 @@ for (const supportedVersion of mineflayer.testedVersions) {
     })
   })
 }
+

@@ -5,13 +5,13 @@
  */
 
 const mineflayer = require('mineflayer')
-const { Viewer, WorldView, getBufferFromStream } = require('prismarine-viewer').viewer
+const { Viewer, WorldView, getBufferFromStream } = require('khiemflayer-minecraft-viewer').viewer
 global.Worker = require('worker_threads').Worker
 
 const THREE = require('three')
 const { createCanvas } = require('node-canvas-webgl/lib')
 const fs = require('fs').promises
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const { EventEmitter } = require('events')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
@@ -93,3 +93,4 @@ class Camera extends EventEmitter {
     console.log('saved', name)
   }
 }
+

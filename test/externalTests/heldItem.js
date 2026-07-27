@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 module.exports = () => async (bot) => {
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   await bot.test.becomeCreative()
   await bot.test.clearInventory()
@@ -15,3 +15,4 @@ module.exports = () => async (bot) => {
   await bot.tossStack(bot.heldItem)
   assert.equal(bot.heldItem, null)
 }
+

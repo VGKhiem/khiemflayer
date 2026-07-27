@@ -1,9 +1,9 @@
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const assert = require('assert')
 const { once, onceWithCleanup } = require('../../lib/promise_utils')
 
 module.exports = () => async (bot) => {
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   bot.test.groundY = bot.supportFeature('tallWorld') ? -60 : 4
 
@@ -187,3 +187,4 @@ module.exports = () => async (bot) => {
   window.close()
   clearLargeChest()
 }
+

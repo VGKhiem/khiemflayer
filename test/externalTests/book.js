@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 module.exports = () => async (bot) => {
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   const pages = [
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -25,3 +25,4 @@ module.exports = () => async (bot) => {
   assert.strictEqual(book.nbt.value.author.value, bot.username)
   assert.strictEqual(book.nbt.value.title.value, 'My Very First Book')
 }
+

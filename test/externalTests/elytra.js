@@ -5,7 +5,7 @@ module.exports = () => async (bot) => {
   if (!bot.supportFeature('hasElytraFlying')) return
   const supportsFireworkRockets = bot.supportFeature('fireworkNamePlural') || bot.supportFeature('fireworkNameSingular')
 
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   await bot.test.setInventorySlot(6, new Item(bot.registry.itemsByName.elytra.id, 1))
   if (supportsFireworkRockets) {
@@ -47,3 +47,4 @@ module.exports = () => async (bot) => {
   }
   assert.ok(bot.fireworkRocketDuration === 0)
 }
+

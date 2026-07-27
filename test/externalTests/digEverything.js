@@ -1,4 +1,4 @@
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const assert = require('assert')
 
 // this test takes about 20min
@@ -48,7 +48,7 @@ const excludedBlocks = [
 ]
 
 module.exports = (version) => {
-  const registry = require('prismarine-registry')(version)
+  const registry = require('khiemflayer-minecraft-registry')(version)
 
   const funcs = {}
   for (const id in registry.blocks) {
@@ -66,7 +66,7 @@ module.exports = (version) => {
 }
 
 async function digSomething (blockId, bot) {
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   await bot.test.setInventorySlot(36, new Item(blockId, 1, 0))
   await bot.test.placeBlock(36, bot.entity.position.plus(new Vec3(1, 0, 0)))
@@ -80,3 +80,4 @@ async function digSomething (blockId, bot) {
   // make sure that block is gone
   assert.strictEqual(bot.blockAt(bot.entity.position.plus(new Vec3(1, 0, 0))).type, 0)
 }
+

@@ -1,8 +1,8 @@
 const assert = require('assert')
-const Vec3 = require('vec3')
+const Vec3 = require('khiemflayer-minecraft-vec3')
 
 module.exports = () => async (bot) => {
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
   const lowerBlock = bot.blockAt(bot.entity.position.offset(0, -1, 0))
 
   let signItem = null
@@ -38,3 +38,4 @@ module.exports = () => async (bot) => {
   await bot.placeBlock(lowerBlock, new Vec3(0, 1, 0))
   return p
 }
+

@@ -1,4 +1,4 @@
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const mineflayer = require('mineflayer')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
@@ -66,3 +66,4 @@ async function loop () {
 }
 
 bot.once('login', loop)
+

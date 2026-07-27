@@ -1,10 +1,10 @@
 const assert = require('assert')
-const Vec3 = require('vec3')
+const Vec3 = require('khiemflayer-minecraft-vec3')
 const { once, sleep, onceWithCleanup } = require('../../lib/promise_utils')
 
 module.exports = () => async (bot) => {
   // Test spawn event on death
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
   const portalName = bot.registry.blocksByName.nether_portal ? 'nether_portal' : 'portal'
 
   let signItem = null
@@ -58,3 +58,4 @@ module.exports = () => async (bot) => {
   await bot.placeBlock(lowerBlock, new Vec3(0, 1, 0))
   await p
 }
+

@@ -1,4 +1,4 @@
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const assert = require('assert')
 
 module.exports = () => async (bot) => {
@@ -77,3 +77,4 @@ module.exports = () => async (bot) => {
 
   bot.test.sayEverywhere('digWaterSpeed: all tests passed')
 }
+

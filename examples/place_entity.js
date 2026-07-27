@@ -1,5 +1,5 @@
 const mineflayer = require('mineflayer')
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const bot = mineflayer.createBot()
 
 bot.on('chat', async (_, msg) => {
@@ -17,3 +17,4 @@ bot.on('chat', async (_, msg) => {
     console.log(armorstand)
   }
 })
+

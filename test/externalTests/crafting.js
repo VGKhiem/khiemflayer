@@ -1,9 +1,9 @@
 const { once } = require('../../lib/promise_utils')
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 
 module.exports = () => async (bot) => {
   const { blocksByName, itemsByName } = bot.registry
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   let populateBlockInventory
   let craftItem
@@ -58,3 +58,4 @@ module.exports = () => async (bot) => {
   const craftingTable = bot.findBlock({ matching: blocksByName.crafting_table.id })
   await bot.craft(bot.recipesFor(itemsByName.ladder.id, null, null, true)[0], 1, craftingTable)
 }
+

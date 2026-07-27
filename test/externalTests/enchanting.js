@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 module.exports = () => async (bot) => {
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   const lapisId = bot.registry.itemsByName.lapis_lazuli ? bot.registry.itemsByName.lapis_lazuli.id : bot.registry.itemsByName.dye.id
   const lapisData = bot.registry.itemsByName.lapis_lazuli ? 0 : 4
@@ -61,3 +61,4 @@ module.exports = () => async (bot) => {
 
   enchantingTable.close()
 }
+

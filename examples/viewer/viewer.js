@@ -6,7 +6,7 @@
  */
 
 const mineflayer = require('mineflayer')
-const mineflayerViewer = require('prismarine-viewer').mineflayer
+const mineflayerViewer = require('khiemflayer-minecraft-viewer').mineflayer
 
 if (process.argv.length < 4 || process.argv.length > 6) {
   console.log('Usage : node viewer.js <host> <port> [<name>] [<password>]')
@@ -23,3 +23,4 @@ const bot = mineflayer.createBot({
 bot.once('spawn', () => {
   mineflayerViewer(bot, { port: 3007, firstPerson: false })
 })
+

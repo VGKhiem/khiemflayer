@@ -11,7 +11,7 @@
  * so be sure to teach him a few more tricks before leaving him alone at night.
  */
 const mineflayer = require('mineflayer')
-const vec3 = require('vec3')
+const vec3 = require('khiemflayer-minecraft-vec3')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
   console.log('Usage : node digger.js <host> <port> [<name>] [<password>]')
@@ -125,3 +125,4 @@ function itemToString (item) {
     return '(nothing)'
   }
 }
+

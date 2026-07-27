@@ -12,7 +12,7 @@ module.exports = () => async (bot) => {
     }
   }
 
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   const villagerType = bot.registry.entitiesByName.villager ? 'villager' : 'Villager'
   const testFluctuations = bot.supportFeature('selectingTradeMovesItems')
@@ -151,3 +151,4 @@ module.exports = () => async (bot) => {
   villager.close()
   bot.test.sayEverywhere(`/kill @e[type=${villagerType}]`)
 }
+

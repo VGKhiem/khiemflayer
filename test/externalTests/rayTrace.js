@@ -1,5 +1,5 @@
 const assert = require('assert')
-const { BlockFace } = require('prismarine-world').iterators
+const { BlockFace } = require('khiemflayer-minecraft-world').iterators
 
 module.exports = () => async (bot) => {
   const { position } = bot.entity
@@ -24,3 +24,4 @@ module.exports = () => async (bot) => {
   assert.deepStrictEqual(block.position, relBlock.position)
   assert.deepStrictEqual(block.face, relBlock.face)
 }
+

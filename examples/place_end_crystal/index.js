@@ -5,7 +5,7 @@
 
 const mineflayer = require('mineflayer')
 const pathfinder = require('mineflayer-pathfinder')
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const AABB = require('khiemflayer-minecraft-physics/lib/aabb')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
@@ -71,4 +71,5 @@ bot.on('chat', async (ign, msg) => {
   await bot.placeEntity(block, new Vec3(0, 1, 0))
   bot.chat('I placed an end crystal!')
 })
+
 

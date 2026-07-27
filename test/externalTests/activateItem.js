@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 module.exports = () => async (bot) => {
-  const Item = require('prismarine-item')(bot.registry)
+  const Item = require('khiemflayer-minecraft-item')(bot.registry)
 
   // Test that activateItem sends the bot's actual rotation (PR #3840).
   // Only applies to versions that use the 'use_item' packet with rotation.
@@ -74,3 +74,4 @@ module.exports = () => async (bot) => {
   await bot.test.becomeCreative()
   await bot.test.clearInventory()
 }
+

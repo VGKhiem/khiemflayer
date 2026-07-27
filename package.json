@@ -1,6 +1,6 @@
 {
   "name": "khiemflayer",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "create minecraft bots with a stable, high level API",
   "main": "index.js",
   "types": "index.d.ts",
@@ -24,18 +24,18 @@
     "khiemflayer-minecraft-data": "^3.111.0",
     "khiemflayer-minecraft-protocol": "^1.66.6",
     "mojangson": "^2.0.4",
-    "prismarine-biome": "^1.1.1",
-    "prismarine-block": "^1.22.0",
-    "prismarine-chat": "^1.7.1",
+    "khiemflayer-minecraft-biome": "^1.1.1",
+    "khiemflayer-minecraft-block": "^1.22.0",
+    "khiemflayer-minecraft-chat": "^1.7.1",
     "khiemflayer-minecraft-chunk": "^1.40.0",
-    "prismarine-entity": "^2.5.0",
-    "prismarine-item": "^1.17.0",
+    "khiemflayer-minecraft-entity": "^2.5.0",
+    "khiemflayer-minecraft-item": "^1.17.0",
     "khiemflayer-minecraft-nbt": "^2.0.0",
     "khiemflayer-minecraft-physics": "^1.11.0",
-    "prismarine-recipe": "^1.5.0",
-    "prismarine-registry": "^1.10.0",
-    "prismarine-windows": "^2.9.0",
-    "prismarine-world": "^3.6.0",
+    "khiemflayer-minecraft-recipe": "^1.5.0",
+    "khiemflayer-minecraft-registry": "^1.10.0",
+    "khiemflayer-minecraft-windows": "^2.9.0",
+    "khiemflayer-minecraft-world": "^3.6.0",
     "protodef": "^1.19.0",
     "typed-emitter": "^1.0.0",
     "uuid-1345": "^1.0.2",
@@ -52,3 +52,4 @@
     "typescript": "^5.4.5"
   }
 }
+

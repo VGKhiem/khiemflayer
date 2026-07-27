@@ -13,7 +13,7 @@
  * a few information while you are in game.
  */
 const mineflayer = require('mineflayer')
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 
 if (process.argv.length < 4 || process.argv.length > 6) {
   console.log('Usage : node chatterbot.js <host> <port> [<name>] [<password>]')
@@ -231,3 +231,4 @@ bot.on('entityEffect', (entity, effect) => {
 bot.on('entityEffectEnd', (entity, effect) => {
   console.log('entityEffectEnd', entity, effect)
 })
+

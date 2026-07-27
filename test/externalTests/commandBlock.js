@@ -1,5 +1,5 @@
 const assert = require('assert')
-const { Vec3 } = require('vec3')
+const { Vec3 } = require('khiemflayer-minecraft-vec3')
 const { once, onceWithCleanup } = require('../../lib/promise_utils')
 
 module.exports = () => async (bot) => {
@@ -19,3 +19,4 @@ module.exports = () => async (bot) => {
   })
   assert(message.json.translate === 'advMode.setCommand.success')
 }
+
