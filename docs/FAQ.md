@@ -92,7 +92,7 @@ One way is to increase the [checkTimeoutInterval](https://github.com/PrismarineJ
 
 ### How to get the lore / text of an item ?
 
-You can use the `item.nbt` property. It is also recommended to use the `prismarine-nbt` library. The `nbt.simplify()` method may be useful.
+You can use the `item.nbt` property. It is also recommended to use the `khiemflayer-minecraft-nbt` library. The `nbt.simplify()` method may be useful.
 
 **Example:**
 ```js
@@ -100,7 +100,7 @@ function getLore (item) {
   let message = ''
   if (item.nbt == null) return message
 
-  const nbt = require('prismarine-nbt')
+  const nbt = require('khiemflayer-minecraft-nbt')
   const ChatMessage = require('prismarine-chat')(bot.version)
 
   const data = nbt.simplify(item.nbt)

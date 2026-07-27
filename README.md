@@ -191,7 +191,7 @@ These are the main modules that make up mineflayer:
 | [prismarine-world](https://github.com/PrismarineJS/prismarine-world) | The core implementation of worlds for prismarine
 | [prismarine-windows](https://github.com/PrismarineJS/prismarine-windows) | Represent minecraft windows
 | [prismarine-item](https://github.com/PrismarineJS/prismarine-item) | Represent a minecraft item with its associated data
-| [prismarine-nbt](https://github.com/PrismarineJS/prismarine-nbt) | An NBT parser for node-minecraft-protocol
+| [khiemflayer-minecraft-nbt](https://github.com/PrismarineJS/khiemflayer-minecraft-nbt) | An NBT parser for node-minecraft-protocol
 | [prismarine-recipe](https://github.com/PrismarineJS/prismarine-recipe) | Represent minecraft recipes
 | [prismarine-biome](https://github.com/PrismarineJS/prismarine-biome) | Represent a minecraft biome with its associated data
 | [prismarine-entity](https://github.com/PrismarineJS/prismarine-entity) | Represent a minecraft entity

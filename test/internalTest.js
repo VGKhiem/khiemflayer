@@ -5,7 +5,7 @@ const vec3 = require('vec3')
 const mc = require('khiemflayer-minecraft-protocol')
 const assert = require('assert')
 const { sleep } = require('../lib/promise_utils')
-const nbt = require('prismarine-nbt')
+const nbt = require('khiemflayer-minecraft-nbt')
 const { once } = require('../lib/promise_utils')
 const { getPort } = require('./common/util')
 
