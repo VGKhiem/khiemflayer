@@ -180,21 +180,21 @@ These are the main modules that make up mineflayer:
 
 | module | description |
 |---|---|
-| [minecraft-protocol](https://github.com/PrismarineJS/node-minecraft-protocol) | Parse and serialize minecraft packets, plus authentication and encryption.
-| [minecraft-data](https://github.com/PrismarineJS/minecraft-data) | Language independent module providing minecraft data for minecraft clients, servers and libraries.
-| [prismarine-physics](https://github.com/PrismarineJS/prismarine-physics) | Provide the physics engine for minecraft entities
-| [prismarine-chunk](https://github.com/PrismarineJS/prismarine-chunk) | A class to hold chunk data for Minecraft
-| [node-vec3](https://github.com/PrismarineJS/node-vec3) | 3d vector math with robust unit tests
-| [prismarine-block](https://github.com/PrismarineJS/prismarine-block) | Represent a minecraft block with its associated data
-| [prismarine-chat](https://github.com/PrismarineJS/prismarine-chat) | A parser for a minecraft chat message (extracted from mineflayer)
-| [node-yggdrasil](https://github.com/PrismarineJS/node-yggdrasil) | Node.js library to interact with Mojang's authentication system, known as Yggdrasil
-| [prismarine-world](https://github.com/PrismarineJS/prismarine-world) | The core implementation of worlds for prismarine
-| [prismarine-windows](https://github.com/PrismarineJS/prismarine-windows) | Represent minecraft windows
-| [prismarine-item](https://github.com/PrismarineJS/prismarine-item) | Represent a minecraft item with its associated data
-| [khiemflayer-minecraft-nbt](https://github.com/PrismarineJS/khiemflayer-minecraft-nbt) | An NBT parser for node-minecraft-protocol
-| [prismarine-recipe](https://github.com/PrismarineJS/prismarine-recipe) | Represent minecraft recipes
-| [prismarine-biome](https://github.com/PrismarineJS/prismarine-biome) | Represent a minecraft biome with its associated data
-| [prismarine-entity](https://github.com/PrismarineJS/prismarine-entity) | Represent a minecraft entity
+| [khiemflayer-minecraft-protocol](https://github.com/VGKhiem/khiemflayer-minecraft-protocol) | Parse and serialize minecraft packets, plus authentication and encryption.
+| [khiemflayer-minecraft-data](https://github.com/VGKhiem/khiemflayer-minecraft-data) | Language independent module providing minecraft data for minecraft clients, servers and libraries.
+| [khiemflayer-physics](https://github.com/VGKhiem/khiemflayer-physics) | Provide the physics engine for minecraft entities
+| [khiemflayer-chunk](https://github.com/VGKhiem/khiemflayer-chunk) | A class to hold chunk data for Minecraft
+| [khiemflayer-vec3](https://github.com/VGKhiem/khiemflayer-vec3) | 3d vector math with robust unit tests
+| [khiemflayer-block](https://github.com/VGKhiem/khiemflayer-block) | Represent a minecraft block with its associated data
+| [khiemflayer-chat](https://github.com/VGKhiem/khiemflayer-chat) | A parser for a minecraft chat message (extracted from mineflayer)
+| [khiemflayer-yggdrasil](https://github.com/VGKhiem/khiemflayer-yggdrasil) | Node.js library to interact with Mojang's authentication system, known as Yggdrasil
+| [khiemflayer-world](https://github.com/VGKhiem/khiemflayer-world) | The core implementation of worlds for prismarine
+| [khiemflayer-windows](https://github.com/VGKhiem/khiemflayer-windows) | Represent minecraft windows
+| [khiemflayer-item](https://github.com/VGKhiem/khiemflayer-item) | Represent a minecraft item with its associated data
+| [khiemflayer-minecraft-nbt](https://github.com/VGKhiem/khiemflayer-minecraft-nbt) | An NBT parser for node-minecraft-protocol
+| [khiemflayer-recipe](https://github.com/VGKhiem/khiemflayer-recipe) | Represent minecraft recipes
+| [khiemflayer-biome](https://github.com/VGKhiem/khiemflayer-biome) | Represent a minecraft biome with its associated data
+| [khiemflayer-entity](https://github.com/VGKhiem/khiemflayer-entity) | Represent a minecraft entity
 
 
 ### Debug
